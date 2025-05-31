@@ -1,0 +1,211 @@
+2025-05-28 12:18:26,142 - INFO:Loaded templates list: []
+2025-05-28 12:18:26,144 - ERROR:Unexpected error in / endpoint: 'index.html' not found in search path: 'templates'
+2025-05-28 12:28:44,574 - INFO:Loaded templates list: []
+2025-05-28 12:28:44,576 - ERROR:Unexpected error in / endpoint: 'index.html' not found in search path: 'templates'
+2025-05-28 12:28:47,211 - INFO:Loaded templates list: []
+2025-05-28 12:28:47,212 - ERROR:Unexpected error in / endpoint: 'index.html' not found in search path: 'templates'
+2025-05-28 12:28:47,991 - INFO:Loaded templates list: []
+2025-05-28 12:28:47,992 - ERROR:Unexpected error in / endpoint: 'index.html' not found in search path: 'templates'
+2025-05-28 12:28:48,433 - INFO:Loaded templates list: []
+2025-05-28 12:28:48,433 - ERROR:Unexpected error in / endpoint: 'index.html' not found in search path: 'templates'
+2025-05-28 12:28:49,156 - INFO:Loaded templates list: []
+2025-05-28 12:28:49,157 - ERROR:Unexpected error in / endpoint: 'index.html' not found in search path: 'templates'
+2025-05-28 12:28:49,597 - INFO:Loaded templates list: []
+2025-05-28 12:28:49,598 - ERROR:Unexpected error in / endpoint: 'index.html' not found in search path: 'templates'
+2025-05-28 12:40:17,237 - INFO:Loaded templates list: []
+2025-05-28 12:46:43,092 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-28 12:47:05,263 - INFO:Received /scan request with scan_type: None
+2025-05-28 12:47:05,263 - ERROR:Invalid scan type
+2025-05-28 12:47:05,266 - INFO:Initialized empty scan history file
+2025-05-28 12:47:05,270 - INFO:Saved scan history entry at 2025-05-28T12:47:05.262983
+2025-05-28 12:47:37,834 - INFO:Received /scan request with scan_type: None
+2025-05-28 12:47:37,834 - ERROR:Invalid scan type
+2025-05-28 12:47:37,838 - INFO:Saved scan history entry at 2025-05-28T12:47:37.834487
+2025-05-28 12:47:40,818 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-28 12:48:20,804 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-28 12:48:35,073 - INFO:Received /scan request with scan_type: None
+2025-05-28 12:48:35,074 - ERROR:Invalid scan type
+2025-05-28 12:48:35,078 - INFO:Saved scan history entry at 2025-05-28T12:48:35.073850
+2025-05-28 13:36:43,367 - INFO:Received /scan request with scan_type: None
+2025-05-28 13:36:43,371 - ERROR:Invalid scan type
+2025-05-28 13:36:43,379 - INFO:Saved scan history entry at 2025-05-28T13:36:43.367418
+2025-05-28 13:37:22,486 - INFO:Loaded scan history with 4 entries
+2025-05-28 13:37:29,576 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-28 13:39:29,858 - INFO:Received /scan request with scan_type: None
+2025-05-28 13:39:29,859 - ERROR:Invalid scan type
+2025-05-28 13:39:29,863 - INFO:Saved scan history entry at 2025-05-28T13:39:29.858461
+2025-05-28 13:44:17,246 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-28 13:44:18,491 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-28 13:44:24,205 - INFO:Received /scan request with scan_type: None
+2025-05-28 13:44:24,206 - ERROR:Invalid scan type
+2025-05-28 13:44:24,212 - INFO:Saved scan history entry at 2025-05-28T13:44:24.205842
+2025-05-28 13:46:55,498 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-28 13:47:00,647 - INFO:Received /scan request with scan_type: None
+2025-05-28 13:47:00,648 - ERROR:Invalid scan type
+2025-05-28 13:47:00,652 - INFO:Saved scan history entry at 2025-05-28T13:47:00.647546
+2025-05-29 07:15:36,928 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-29 07:15:42,731 - INFO:Received /scan request with scan_type: None
+2025-05-29 07:15:42,732 - ERROR:Invalid scan type
+2025-05-29 07:15:42,754 - INFO:Saved scan history entry at 2025-05-29T07:15:42.731894
+2025-05-29 07:31:47,244 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-29 07:31:51,737 - INFO:Received /scan request with scan_type: None
+2025-05-29 07:31:51,738 - ERROR:Invalid scan type
+2025-05-29 07:31:51,742 - INFO:Saved scan history entry at 2025-05-29T07:31:51.737954
+2025-05-29 07:31:54,786 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-29 07:31:59,873 - INFO:Received /scan request with scan_type: None
+2025-05-29 07:31:59,873 - ERROR:Invalid scan type
+2025-05-29 07:31:59,879 - INFO:Saved scan history entry at 2025-05-29T07:31:59.873320
+2025-05-29 07:33:05,264 - INFO:Received /scan request with scan_type: None
+2025-05-29 07:33:05,265 - ERROR:Invalid scan type
+2025-05-29 07:33:05,269 - INFO:Saved scan history entry at 2025-05-29T07:33:05.264730
+2025-05-29 13:11:05,321 - INFO:Received /scan request with scan_type: None
+2025-05-29 13:11:05,325 - ERROR:Invalid scan type
+2025-05-29 13:11:05,335 - INFO:Saved scan history entry at 2025-05-29T13:11:05.320504
+2025-05-29 13:11:12,487 - INFO:Received /scan request with scan_type: None
+2025-05-29 13:11:12,488 - ERROR:Invalid scan type
+2025-05-29 13:11:12,492 - INFO:Saved scan history entry at 2025-05-29T13:11:12.487745
+2025-05-29 15:22:06,315 - INFO:Received /scan request with scan_type: None
+2025-05-29 15:22:06,319 - ERROR:Invalid scan type
+2025-05-29 15:22:06,328 - INFO:Saved scan history entry at 2025-05-29T15:22:06.314459
+2025-05-29 15:29:59,340 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-29 15:30:05,349 - INFO:Received /scan request with scan_type: None
+2025-05-29 15:30:05,349 - ERROR:Invalid scan type
+2025-05-29 15:30:05,353 - INFO:Saved scan history entry at 2025-05-29T15:30:05.349568
+2025-05-29 15:47:40,544 - INFO:Received /scan request with scan_type: None
+2025-05-29 15:47:40,545 - ERROR:Invalid scan type
+2025-05-29 15:47:40,550 - INFO:Saved scan history entry at 2025-05-29T15:47:40.544368
+2025-05-29 16:16:59,456 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-29 16:17:04,065 - INFO:Received /scan request with scan_type: None
+2025-05-29 16:17:04,065 - ERROR:Invalid scan type
+2025-05-29 16:17:04,084 - INFO:Saved scan history entry at 2025-05-29T16:17:04.065077
+2025-05-29 16:24:31,537 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-29 16:24:41,143 - INFO:Received /scan request with scan_type: manual
+2025-05-29 16:24:41,144 - INFO:Attempt 1/3: Calling /messages with data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-29 16:24:41,169 - INFO:Test connection to mcp-server: status code: 404, headers: {'date': 'Thu, 29 May 2025 16:24:40 GMT', 'server': 'uvicorn', 'content-length': '22', 'content-type': 'application/json'}, content: {"detail":"Not Found"}
+2025-05-29 16:24:55,587 - INFO:Received response with status code: 200, headers: {'date': 'Thu, 29 May 2025 16:24:40 GMT', 'server': 'uvicorn', 'content-length': '20', 'content-type': 'application/json'}, content: {"status":"success"}
+2025-05-29 16:24:55,587 - INFO:Response data: {'status': 'success'}
+2025-05-29 16:24:55,608 - INFO:Saved scan history entry at 2025-05-29T16:24:41.143655
+2025-05-29 16:24:55,608 - INFO:Manual scan completed for URL: http://testphp.vulnweb.com/, Results: 4
+2025-05-29 16:25:12,210 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-29 16:25:21,529 - INFO:Received /scan request with scan_type: manual
+2025-05-29 16:25:21,531 - INFO:Attempt 1/3: Calling /messages with data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-29 16:25:21,535 - INFO:Test connection to mcp-server: status code: 404, headers: {'date': 'Thu, 29 May 2025 16:25:20 GMT', 'server': 'uvicorn', 'content-length': '22', 'content-type': 'application/json'}, content: {"detail":"Not Found"}
+2025-05-29 16:25:25,788 - INFO:Received response with status code: 200, headers: {'date': 'Thu, 29 May 2025 16:25:20 GMT', 'server': 'uvicorn', 'content-length': '20', 'content-type': 'application/json'}, content: {"status":"success"}
+2025-05-29 16:25:25,788 - INFO:Response data: {'status': 'success'}
+2025-05-29 16:25:25,821 - INFO:Saved scan history entry at 2025-05-29T16:25:21.529839
+2025-05-29 16:25:25,821 - INFO:Manual scan completed for URL: http://testphp.vulnweb.com/, Results: 4
+2025-05-29 16:25:45,867 - INFO:Loaded scan history with 19 entries
+2025-05-29 16:26:29,718 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-29 16:26:51,239 - INFO:Received /scan request with scan_type: deepseek
+2025-05-29 16:27:06,366 - INFO:Received /scan request with scan_type: deepseek
+2025-05-29 16:29:32,993 - INFO:Received /scan request with scan_type: deepseek
+2025-05-29 16:30:20,716 - INFO:Received /scan request with scan_type: manual
+2025-05-29 16:30:20,717 - INFO:Attempt 1/3: Calling /messages with data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://demo.testfire.net"], "template_paths": ["scanner/templates/xss-detection.yaml"]}}, "id": 1}
+2025-05-29 16:30:20,721 - INFO:Test connection to mcp-server: status code: 404, headers: {'date': 'Thu, 29 May 2025 16:30:20 GMT', 'server': 'uvicorn', 'content-length': '22', 'content-type': 'application/json'}, content: {"detail":"Not Found"}
+2025-05-29 16:30:27,861 - INFO:Received response with status code: 200, headers: {'date': 'Thu, 29 May 2025 16:30:20 GMT', 'server': 'uvicorn', 'content-length': '56', 'content-type': 'application/json'}, content: {"status":"error","message":"Nuclei returned no output"}
+2025-05-29 16:30:27,861 - INFO:Response data: {'status': 'error', 'message': 'Nuclei returned no output'}
+2025-05-29 16:30:27,866 - INFO:Saved scan history entry at 2025-05-29T16:30:20.716036
+2025-05-29 16:30:27,868 - ERROR:Unexpected error: 'summary' is undefined
+2025-05-29 16:30:27,881 - INFO:Saved scan history entry at 2025-05-29T16:30:20.716036
+2025-05-29 16:31:00,370 - INFO:Received /scan request with scan_type: manual
+2025-05-29 16:31:00,371 - INFO:Attempt 1/3: Calling /messages with data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-29 16:31:00,374 - INFO:Test connection to mcp-server: status code: 404, headers: {'date': 'Thu, 29 May 2025 16:31:00 GMT', 'server': 'uvicorn', 'content-length': '22', 'content-type': 'application/json'}, content: {"detail":"Not Found"}
+2025-05-29 16:31:04,667 - INFO:Received response with status code: 200, headers: {'date': 'Thu, 29 May 2025 16:31:00 GMT', 'server': 'uvicorn', 'content-length': '20', 'content-type': 'application/json'}, content: {"status":"success"}
+2025-05-29 16:31:04,667 - INFO:Response data: {'status': 'success'}
+2025-05-29 16:31:04,684 - INFO:Saved scan history entry at 2025-05-29T16:31:00.370314
+2025-05-29 16:31:04,684 - INFO:Manual scan completed for URL: http://testphp.vulnweb.com/, Results: 4
+2025-05-29 16:31:10,265 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-29 16:31:19,666 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-29 16:31:42,239 - INFO:Received /scan request with scan_type: manual
+2025-05-29 16:31:42,240 - INFO:Attempt 1/3: Calling /messages with data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/csrf-detection.yaml"]}}, "id": 1}
+2025-05-29 16:31:42,244 - INFO:Test connection to mcp-server: status code: 404, headers: {'date': 'Thu, 29 May 2025 16:31:41 GMT', 'server': 'uvicorn', 'content-length': '22', 'content-type': 'application/json'}, content: {"detail":"Not Found"}
+2025-05-29 16:31:45,956 - INFO:Received response with status code: 200, headers: {'date': 'Thu, 29 May 2025 16:31:41 GMT', 'server': 'uvicorn', 'content-length': '20', 'content-type': 'application/json'}, content: {"status":"success"}
+2025-05-29 16:31:45,957 - INFO:Response data: {'status': 'success'}
+2025-05-29 16:31:45,974 - INFO:Saved scan history entry at 2025-05-29T16:31:42.239674
+2025-05-29 16:31:45,974 - INFO:Manual scan completed for URL: http://testphp.vulnweb.com/, Results: 2
+2025-05-29 16:33:36,610 - INFO:Received /scan request with scan_type: manual
+2025-05-29 16:33:36,611 - INFO:Attempt 1/3: Calling /messages with data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/csrf-detection.yaml"]}}, "id": 1}
+2025-05-29 16:33:36,615 - INFO:Test connection to mcp-server: status code: 404, headers: {'date': 'Thu, 29 May 2025 16:33:35 GMT', 'server': 'uvicorn', 'content-length': '22', 'content-type': 'application/json'}, content: {"detail":"Not Found"}
+2025-05-29 16:33:40,472 - INFO:Received response with status code: 200, headers: {'date': 'Thu, 29 May 2025 16:33:35 GMT', 'server': 'uvicorn', 'content-length': '20', 'content-type': 'application/json'}, content: {"status":"success"}
+2025-05-29 16:33:40,473 - INFO:Response data: {'status': 'success'}
+2025-05-29 16:33:40,491 - INFO:Saved scan history entry at 2025-05-29T16:33:36.610702
+2025-05-29 16:33:40,492 - INFO:Manual scan completed for URL: http://testphp.vulnweb.com/, Results: 2
+2025-05-29 16:33:42,520 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-29 16:43:33,436 - INFO:Received /scan request with scan_type: deepseek
+2025-05-30 07:55:19,963 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-30 07:55:26,705 - INFO:Received /scan request with scan_type: manual
+2025-05-30 07:55:26,707 - INFO:Attempt 1/3: Calling /messages with data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-30 07:55:26,729 - INFO:Test connection to mcp-server: status code: 404, headers: {'date': 'Fri, 30 May 2025 07:55:26 GMT', 'server': 'uvicorn', 'content-length': '22', 'content-type': 'application/json'}, content: {"detail":"Not Found"}
+2025-05-30 07:56:33,240 - INFO:Received response with status code: 200, headers: {'date': 'Fri, 30 May 2025 07:55:26 GMT', 'server': 'uvicorn', 'content-length': '20', 'content-type': 'application/json'}, content: {"status":"success"}
+2025-05-30 07:56:33,240 - INFO:Response data: {'status': 'success'}
+2025-05-30 07:56:33,260 - INFO:Saved scan history entry at 2025-05-30T07:55:26.705936
+2025-05-30 07:56:33,260 - INFO:Manual scan completed for URL: http://testphp.vulnweb.com/, Results: 4
+2025-05-30 08:18:45,209 - INFO:Received /scan request with scan_type: manual
+2025-05-30 08:18:45,211 - INFO:Attempt 1/3: Calling /messages with data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-30 08:18:45,217 - INFO:Test connection to mcp-server: status code: 404, headers: {'date': 'Fri, 30 May 2025 08:18:44 GMT', 'server': 'uvicorn', 'content-length': '22', 'content-type': 'application/json'}, content: {"detail":"Not Found"}
+2025-05-30 08:19:53,197 - INFO:Received response with status code: 200, headers: {'date': 'Fri, 30 May 2025 08:18:44 GMT', 'server': 'uvicorn', 'content-length': '1994', 'content-type': 'application/json'}, content: {"status":"success","summary":{"Critical":2,"High":0,"Medium":2,"Low":0,"Duration":66.01},"vulnerabilities":[{"matched-at":"http://testphp.vulnweb.com/index.php?cmd=whoami","payload":"whoami","type":"RCE","verified":"Yes","severity":"critical","template-description":"Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.","template-reference":"https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution",
+2025-05-30 08:19:53,198 - INFO:Response data: {'status': 'success', 'summary': {'Critical': 2, 'High': 0, 'Medium': 2, 'Low': 0, 'Duration': 66.01}, 'vulnerabilities': [{'matched-at': 'http://testphp.vulnweb.com/index.php?cmd=whoami', 'payload': 'whoami', 'type': 'RCE', 'verified': 'Yes', 'severity': 'critical', 'template-description': 'Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.', 'template-reference': 'https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution', 'template-author': 'nghia', 'template-tags': 'lfi, rce, injection'}, {'matched-at': 'http://testphp.vulnweb.com/index.php?file=whoami', 'payload': 'whoami', 'type': 'RCE', 'verified': 'Yes', 'severity': 'critical', 'template-description': 'Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.', 'template-reference': 'https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution', 'template-author': 'nghia', 'template-tags': 'lfi, rce, injection'}, {'matched-at': 'http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd', 'payload': '../../../../etc/passwd', 'type': 'LFI', 'verified': 'No', 'severity': 'medium', 'template-description': 'Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.', 'template-reference': 'https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution', 'template-author': 'nghia', 'template-tags': 'lfi, rce, injection'}, {'matched-at': 'http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd', 'payload': '../../../../etc/passwd', 'type': 'LFI', 'verified': 'No', 'severity': 'medium', 'template-description': 'Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.', 'template-reference': 'https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution', 'template-author': 'nghia', 'template-tags': 'lfi, rce, injection'}]}
+2025-05-30 08:19:53,268 - INFO:Saved scan history entry at 2025-05-30T08:18:45.209606
+2025-05-30 08:19:53,274 - INFO:Manual scan completed for URL: http://testphp.vulnweb.com/, Results: 4
+2025-05-30 08:19:53,352 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-30 08:20:02,463 - INFO:Received /scan request with scan_type: manual
+2025-05-30 08:20:02,465 - INFO:Attempt 1/3: Calling /messages with data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-30 08:20:02,469 - INFO:Test connection to mcp-server: status code: 404, headers: {'date': 'Fri, 30 May 2025 08:20:01 GMT', 'server': 'uvicorn', 'content-length': '22', 'content-type': 'application/json'}, content: {"detail":"Not Found"}
+2025-05-30 08:20:38,461 - INFO:Received response with status code: 200, headers: {'date': 'Fri, 30 May 2025 08:20:01 GMT', 'server': 'uvicorn', 'content-length': '1994', 'content-type': 'application/json'}, content: {"status":"success","summary":{"Critical":2,"High":0,"Medium":2,"Low":0,"Duration":34.03},"vulnerabilities":[{"matched-at":"http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd","payload":"../../../../etc/passwd","type":"LFI","verified":"No","severity":"medium","template-description":"Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.","template-reference":"https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/a
+2025-05-30 08:20:38,461 - INFO:Response data: {'status': 'success', 'summary': {'Critical': 2, 'High': 0, 'Medium': 2, 'Low': 0, 'Duration': 34.03}, 'vulnerabilities': [{'matched-at': 'http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd', 'payload': '../../../../etc/passwd', 'type': 'LFI', 'verified': 'No', 'severity': 'medium', 'template-description': 'Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.', 'template-reference': 'https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution', 'template-author': 'nghia', 'template-tags': 'lfi, rce, injection'}, {'matched-at': 'http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd', 'payload': '../../../../etc/passwd', 'type': 'LFI', 'verified': 'No', 'severity': 'medium', 'template-description': 'Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.', 'template-reference': 'https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution', 'template-author': 'nghia', 'template-tags': 'lfi, rce, injection'}, {'matched-at': 'http://testphp.vulnweb.com/index.php?file=whoami', 'payload': 'whoami', 'type': 'RCE', 'verified': 'Yes', 'severity': 'critical', 'template-description': 'Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.', 'template-reference': 'https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution', 'template-author': 'nghia', 'template-tags': 'lfi, rce, injection'}, {'matched-at': 'http://testphp.vulnweb.com/index.php?cmd=whoami', 'payload': 'whoami', 'type': 'RCE', 'verified': 'Yes', 'severity': 'critical', 'template-description': 'Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.', 'template-reference': 'https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution', 'template-author': 'nghia', 'template-tags': 'lfi, rce, injection'}]}
+2025-05-30 08:20:38,475 - INFO:Saved scan history entry at 2025-05-30T08:20:02.463248
+2025-05-30 08:20:38,476 - INFO:Manual scan completed for URL: http://testphp.vulnweb.com/, Results: 4
+2025-05-30 09:02:29,841 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-30 09:02:37,984 - INFO:Received /scan request with scan_type: manual
+2025-05-30 09:02:37,998 - INFO:Sent scan request to mcp-server for URL: http://testphp.vulnweb.com/
+2025-05-30 09:03:04,339 - ERROR:Failed to connect to MCP Server: 405
+2025-05-30 09:09:36,165 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-30 09:09:41,695 - INFO:Received /scan request with scan_type: manual
+2025-05-30 09:09:41,700 - INFO:Sent scan request to mcp-server for URL: http://testphp.vulnweb.com/
+2025-05-30 09:11:31,819 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-30 09:11:42,385 - INFO:Received /scan request with scan_type: manual
+2025-05-30 09:11:42,391 - INFO:Sent scan request to mcp-server for URL: http://testphp.vulnweb.com/
+2025-05-31 01:07:22,269 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:07:32,865 - INFO:Received /scan request with scan_type: deepseek
+2025-05-31 01:07:44,402 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:07:51,567 - INFO:Received /scan request with scan_type: deepseek
+2025-05-31 01:08:08,863 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:09:15,388 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:09:19,099 - INFO:Received /scan request with scan_type: deepseek
+2025-05-31 01:09:22,086 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:09:28,819 - INFO:Received /scan request with scan_type: manual
+2025-05-31 01:09:28,825 - INFO:Sent scan request to mcp-server for URL: http://testphp.vulnweb.com/
+2025-05-31 01:10:04,220 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:10:08,623 - INFO:Received /scan request with scan_type: deepseek
+2025-05-31 01:11:17,748 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:11:22,015 - INFO:Received /scan request with scan_type: deepseek
+2025-05-31 01:25:56,298 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:26:01,884 - INFO:Received /scan request with scan_type: deepseek
+2025-05-31 01:26:09,560 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:27:24,891 - INFO:Received /scan request with scan_type: deepseek
+2025-05-31 01:31:15,342 - INFO:Received /scan request with scan_type: deepseek
+2025-05-31 01:31:15,346 - INFO:Sent scan request to mcp-server for URL: http://testphp.vulnweb.com/
+2025-05-31 01:31:29,300 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:31:32,907 - INFO:Received /scan request with scan_type: deepseek
+2025-05-31 01:31:32,912 - INFO:Sent scan request to mcp-server for URL: http://testphp.vulnweb.com/
+2025-05-31 01:43:45,844 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:43:52,795 - INFO:Received /scan request with scan_type: deepseek
+2025-05-31 01:43:52,800 - INFO:Sent scan request to mcp-server for URL: http://testphp.vulnweb.com/
+2025-05-31 01:43:59,865 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:46:21,604 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:46:27,006 - INFO:Received /scan request with scan_type: deepseek
+2025-05-31 01:47:41,906 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:47:43,979 - INFO:Loaded templates list: ['bac-detection.yaml', 'csrf-detection.yaml', 'cve-2019-9641.yaml', 'idor-detection.yaml', 'lfi-rce-detection.yaml', 'sensitive-data-exposure.yaml', 'sql_injection_advanced.yaml', 'ssrf-detection.yaml', 'xss-detection.yaml']
+2025-05-31 01:47:48,496 - INFO:Received /scan request with scan_type: deepseek
+2025-05-31 01:47:48,498 - INFO:Scanning URL http://testphp.vulnweb.com/ with template: bac-detection.yaml
+2025-05-31 01:48:18,143 - INFO:Scanning URL http://testphp.vulnweb.com/ with template: csrf-detection.yaml
+2025-05-31 01:48:22,326 - INFO:Scanning URL http://testphp.vulnweb.com/ with template: cve-2019-9641.yaml
+2025-05-31 01:48:26,412 - ERROR:Error with template cve-2019-9641.yaml: No valid vulnerabilities found from Nuclei output
+2025-05-31 01:48:26,412 - INFO:Scanning URL http://testphp.vulnweb.com/ with template: idor-detection.yaml
+2025-05-31 01:48:31,185 - INFO:Scanning URL http://testphp.vulnweb.com/ with template: lfi-rce-detection.yaml
+2025-05-31 01:48:35,856 - INFO:Scanning URL http://testphp.vulnweb.com/ with template: sensitive-data-exposure.yaml
+2025-05-31 01:48:40,038 - INFO:Scanning URL http://testphp.vulnweb.com/ with template: sql_injection_advanced.yaml
+2025-05-31 01:48:45,457 - INFO:Scanning URL http://testphp.vulnweb.com/ with template: ssrf-detection.yaml
+2025-05-31 01:48:49,042 - ERROR:Error with template ssrf-detection.yaml: No valid vulnerabilities found from Nuclei output
+2025-05-31 01:48:49,042 - INFO:Scanning URL http://testphp.vulnweb.com/ with template: xss-detection.yaml
+2025-05-31 01:48:54,568 - INFO:Saved scan history entry at 2025-05-31T01:47:48.496199

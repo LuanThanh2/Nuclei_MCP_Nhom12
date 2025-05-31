@@ -1,0 +1,32 @@
+id: bac-detection
+info:
+  name: Broken Access Control Detection
+  author: nghia
+  severity: high
+  description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  reference:
+    - https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  tags: bac, access-control
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/admin"
+      - "{{BaseURL}}/admin/dashboard.php"
+      - "{{BaseURL}}/manage_users.php"
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "Admin Dashboard"
+          - "Manage Users"
+          - "Administrative Panel"
+        part: body
+        condition: or
+      - type: dsl
+        dsl:
+          - "!contains(tolower(body), 'access denied')"
+          - "!contains(tolower(body), 'unauthorized')"
+        condition: and

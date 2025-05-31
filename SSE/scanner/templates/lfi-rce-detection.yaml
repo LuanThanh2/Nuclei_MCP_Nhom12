@@ -1,0 +1,30 @@
+id: lfi-rce-detection
+info:
+  name: LFI and RCE Detection
+  author: nghia
+  severity: critical
+  description: Detects Local File Inclusion (LFI) and Remote Code Execution (RCE) vulnerabilities.
+  reference:
+    - https://owasp.org/www-community/attacks/Local_File_Inclusion
+    - https://owasp.org/www-community/attacks/Remote_Code_Execution
+  tags: lfi, rce, injection
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/index.php?file={{payload}}"
+      - "{{BaseURL}}/index.php?cmd={{payload}}"
+    payloads:
+      payload:
+        - "../../../../etc/passwd"
+        - "whoami"
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "root:"
+          - "www-data"
+          - "nobody"
+        part: body
+        condition: or

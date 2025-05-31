@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .summary {
+            margin-bottom: 20px;
+        }
+        .summary div {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .filter-search {
+            margin-bottom: 20px;
+        }
+        .filter-search select, .filter-search input {
+            padding: 5px;
+        }
+        .error {
+            color: red;
+        }
+        .analysis {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        .critical { background-color: #ffcccc; }
+        .high { background-color: #ffebcc; }
+        .medium { background-color: #ffffcc; }
+        .low { background-color: #ccffcc; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Scan Results</h1>
+
+    <div id="error-message" class="error">
+        {% if error_message %}
+        {{ error_message }}
+        {% endif %}
+    </div>
+
+    <div id="summary" class="summary">
+        <h2>Summary</h2>
+        <div>Critical: <span id="critical-count">0</span></div>
+        <div>High: <span id="high-count">0</span></div>
+        <div>Medium: <span id="medium-count">0</span></div>
+        <div>Low: <span id="low-count">0</span></div>
+        <div>Duration: <span id="duration">0</span> seconds</div>
+    </div>
+
+    {% if analysis %}
+    <div class="analysis">
+        <h2>Analysis from DeepSeek</h2>
+        <p>{{ analysis | safe }}</p>
+    </div>
+    {% endif %}
+
+    <div class="filter-search">
+        <h2>Filter & Search</h2>
+        <div>
+            Filter by Severity:
+            <select id="severity-filter">
+                <option value="All">All</option>
+                <option value="Critical">Critical</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+        </div>
+        <div>
+            Search by Endpoint/Payload:
+            <input type="text" id="search-input" placeholder="Enter endpoint or payload">
+        </div>
+    </div>
+
+    <div>
+        <h2>Detailed Results</h2>
+        <table id="results-table">
+            <thead>
+                <tr>
+                    <th>Endpoint</th>
+                    <th>Payload</th>
+                    <th>Type</th>
+                    <th>Verified</th>
+                    <th>Severity</th>
+                    <th>Description</th>
+                    <th>Reference</th>
+                    <th>Author</th>
+                    <th>Tags</th>
+                </tr>
+            </thead>
+            <tbody id="results-body">
+                <tr>
+                    <td colspan="9">Waiting for scan results...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <a href="/"><button>Back to Home</button></a>
+        <a href="/history"><button>View Scan History</button></a>
+    </div>
+
+    <script>
+        const resultsBody = document.getElementById('results-body');
+        const severityFilter = document.getElementById('severity-filter');
+        const searchInput = document.getElementById('search-input');
+        let allResults = [];
+
+        // Nhận kết quả từ SSE
+        const source = new EventSource('/sse');
+        source.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            const errorMessageDiv = document.getElementById('error-message');
+
+            if (data.status === 'scanning') {
+                errorMessageDiv.textContent = 'Scanning in progress...';
+                resultsBody.innerHTML = '<tr><td colspan="9">Waiting for scan results...</td></tr>';
+            } else if (data.status === 'progress') {
+                const vuln = data.vulnerability;
+                allResults.push(vuln);
+                if (resultsBody.innerHTML.includes('Waiting for scan results...')) {
+                    resultsBody.innerHTML = '';
+                }
+                addResultRow(vuln);
+                updateSummary();
+                filterResults();
+            } else if (data.status === 'completed') {
+                const summary = data.summary;
+                document.getElementById('critical-count').textContent = summary.Critical;
+                document.getElementById('high-count').textContent = summary.High;
+                document.getElementById('medium-count').textContent = summary.Medium;
+                document.getElementById('low-count').textContent = summary.Low;
+                document.getElementById('duration').textContent = summary.Duration;
+                errorMessageDiv.textContent = '';
+                source.close();
+            } else if (data.status === 'error') {
+                errorMessageDiv.textContent = 'Error: ' + data.message;
+                source.close();
+            }
+        };
+        source.onerror = function() {
+            document.getElementById('error-message').textContent = 'Error connecting to SSE stream.';
+            source.close();
+        };
+
+        function addResultRow(vuln) {
+            const row = document.createElement('tr');
+            row.className = vuln.severity.toLowerCase();
+            row.innerHTML = `
+                <td>${vuln['matched-at'] || 'N/A'}</td>
+                <td>${vuln.payload || 'N/A'}</td>
+                <td>${vuln.type || 'N/A'}</td>
+                <td>${vuln.verified || 'No'}</td>
+                <td>${vuln.severity || 'Low'}</td>
+                <td>${vuln['template-description'] || 'N/A'}</td>
+                <td>${vuln['template-reference'] || 'N/A'}</td>
+                <td>${vuln['template-author'] || 'N/A'}</td>
+                <td>${vuln['template-tags'] || 'N/A'}</td>
+            `;
+            resultsBody.appendChild(row);
+        }
+
+        function updateSummary() {
+            let critical = 0, high = 0, medium = 0, low = 0;
+            allResults.forEach(vuln => {
+                const severity = vuln.severity.toLowerCase();
+                if (severity === 'critical') critical++;
+                else if (severity === 'high') high++;
+                else if (severity === 'medium') medium++;
+                else low++;
+            });
+            document.getElementById('critical-count').textContent = critical;
+            document.getElementById('high-count').textContent = high;
+            document.getElementById('medium-count').textContent = medium;
+            document.getElementById('low-count').textContent = low;
+        }
+
+        function filterResults() {
+            const severity = severityFilter.value;
+            const search = searchInput.value.toLowerCase();
+            const rows = resultsBody.getElementsByTagName('tr');
+
+            for (let row of rows) {
+                if (row.innerHTML.includes('Waiting for scan results...')) continue;
+                const severityClass = row.className;
+                const endpoint = row.cells[0].textContent.toLowerCase();
+                const payload = row.cells[1].textContent.toLowerCase();
+
+                const matchesSeverity = severity === 'All' || severityClass === severity.toLowerCase();
+                const matchesSearch = search === '' || endpoint.includes(search) || payload.includes(search);
+
+                row.style.display = matchesSeverity && matchesSearch ? '' : 'none';
+            }
+        }
+
+        severityFilter.addEventListener('change', filterResults);
+        searchInput.addEventListener('input', filterResults);
+    </script>
+</body>
+</html>

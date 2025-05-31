@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclei MCP Scanner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .form-group button:hover:not(:disabled) {
+            background-color: #45a049;
+        }
+        .loading {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nuclei MCP Scanner</h1>
+
+    <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'ManualScan')">Manual Scan</button>
+        <button class="tablinks" onclick="openTab(event, 'DeepSeekScan')">DeepSeek-Assisted Scan</button>
+    </div>
+
+    <div id="ManualScan" class="tabcontent" style="display: block;">
+        <h3>Manual Scan</h3>
+        <form id="manualScanForm" action="/scan" method="post">
+            <input type="hidden" name="scan_type" value="manual">
+            <div class="form-group">
+                <label for="url">Target URL (e.g., http://testphp.vulnweb.com/):</label>
+                <input type="text" id="url" name="url" required>
+            </div>
+            <div class="form-group">
+                <label for="template">Choose Template:</label>
+                <select id="template" name="template" required>
+                    <option value="">Select a template</option>
+                    {% for template in templates %}
+                    <option value="{{ template }}">{{ template }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="manualScanButton">Scan</button>
+                <a href="/history"><button type="button">View Scan History</button></a>
+            </div>
+            <div id="manualLoading" class="loading">Scanning... Please wait.</div>
+        </form>
+    </div>
+
+    <div id="DeepSeekScan" class="tabcontent">
+        <h3>DeepSeek-Assisted Scan</h3>
+        <form id="deepSeekScanForm" action="/scan" method="post">
+            <input type="hidden" name="scan_type" value="deepseek">
+            <div class="form-group">
+                <label for="deepseek_input">Enter Command (e.g., Scan http://demo.testfire.net for XSS):</label>
+                <input type="text" id="deepseek_input" name="deepseek_input" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="deepSeekScanButton">Scan with DeepSeek</button>
+                <a href="/history"><button type="button">View Scan History</button></a>
+            </div>
+            <div id="deepSeekLoading" class="loading">Processing with DeepSeek... Please wait.</div>
+        </form>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        document.getElementById("manualScanForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const button = document.getElementById("manualScanButton");
+            const loading = document.getElementById("manualLoading");
+            button.disabled = true;
+            loading.style.display = "block";
+
+            fetch("/scan", {
+                method: "POST",
+                body: new FormData(this)
+            }).then(response => response.text())
+              .then(() => {
+                  // Chuyển hướng tới /results để nhận kết quả từ SSE
+                  window.location.href = "/results";
+              })
+              .catch(error => {
+                  console.error("Error:", error);
+                  button.disabled = false;
+                  loading.style.display = "none";
+                  alert("Failed to start scan: " + error.message);
+              });
+        });
+
+        document.getElementById("deepSeekScanForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const button = document.getElementById("deepSeekScanButton");
+            const loading = document.getElementById("deepSeekLoading");
+            button.disabled = true;
+            loading.style.display = "block";
+
+            fetch("/scan", {
+                method: "POST",
+                body: new FormData(this)
+            }).then(response => response.text())
+              .then(() => {
+                  window.location.href = "/results";
+              })
+              .catch(error => {
+                  console.error("Error:", error);
+                  button.disabled = false;
+                  loading.style.display = "none";
+                  alert("Failed to start scan: " + error.message);
+              });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+flask
+requests
+python-dotenv
+beautifulsoup4
+fastapi
+uvicorn
+python-multipart
+jinja2
+aiohttp==3.10.5

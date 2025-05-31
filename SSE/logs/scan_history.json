@@ -1,0 +1,368 @@
+[
+  {
+    "timestamp": "2025-05-28T12:47:05.262983",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.00081,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-28T12:47:37.834487",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.000651,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-28T12:48:35.073850",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.000856,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-28T13:36:43.367418",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.004249,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-28T13:39:29.858461",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.000895,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-28T13:44:24.205842",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.000913,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-28T13:47:00.647546",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.000922,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-29T07:15:42.731894",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.000783,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-29T07:31:51.737954",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.000514,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-29T07:31:59.873320",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.001178,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-29T07:33:05.264730",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.00073,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-29T13:11:05.320504",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.004912,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-29T13:11:12.487745",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.00081,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-29T15:22:06.314459",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.005411,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-29T15:30:05.349568",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.000465,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-29T15:47:40.544368",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.001026,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-29T16:17:04.065077",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 0.000652,
+    "analysis": "Invalid scan type"
+  },
+  {
+    "timestamp": "2025-05-29T16:24:41.143655",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 4
+    },
+    "duration": 14.460212,
+    "analysis": ""
+  },
+  {
+    "timestamp": "2025-05-29T16:25:21.529839",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 4
+    },
+    "duration": 4.284973,
+    "analysis": ""
+  },
+  {
+    "timestamp": "2025-05-29T16:30:20.716036",
+    "url": "http://demo.testfire.net",
+    "template": "xss-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 7.146157,
+    "analysis": "Nuclei returned no output"
+  },
+  {
+    "timestamp": "2025-05-29T16:30:20.716036",
+    "url": "http://demo.testfire.net",
+    "template": "xss-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 7.15231,
+    "analysis": "Unexpected error: 'summary' is undefined"
+  },
+  {
+    "timestamp": "2025-05-29T16:31:00.370314",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 4
+    },
+    "duration": 4.310565,
+    "analysis": ""
+  },
+  {
+    "timestamp": "2025-05-29T16:31:42.239674",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "csrf-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "duration": 3.730201,
+    "analysis": ""
+  },
+  {
+    "timestamp": "2025-05-29T16:33:36.610702",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "csrf-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "duration": 3.875871,
+    "analysis": ""
+  },
+  {
+    "timestamp": "2025-05-30T07:55:26.705936",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 4
+    },
+    "duration": 66.550663,
+    "analysis": ""
+  },
+  {
+    "timestamp": "2025-05-30T08:18:45.209606",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 2,
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "duration": 68.003386,
+    "analysis": ""
+  },
+  {
+    "timestamp": "2025-05-30T08:20:02.463248",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 2,
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "duration": 36.008452,
+    "analysis": ""
+  },
+  {
+    "timestamp": "2025-05-31T01:47:48.496199",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "bac-detection.yaml, csrf-detection.yaml, cve-2019-9641.yaml, idor-detection.yaml, lfi-rce-detection.yaml, sensitive-data-exposure.yaml, sql_injection_advanced.yaml, ssrf-detection.yaml, xss-detection.yaml",
+    "summary": {
+      "Critical": 0,
+      "High": 0,
+      "Medium": 0,
+      "Low": 3,
+      "Duration": 66.061831
+    },
+    "duration": 66.061845,
+    "analysis": "No valid vulnerabilities found from Nuclei output",
+    "results_file": "scan_results_20250531_014748.json"
+  }
+]

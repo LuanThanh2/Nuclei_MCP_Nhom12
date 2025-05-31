@@ -1,0 +1,33 @@
+id: csrf-detection
+info:
+  name: CSRF Detection
+  author: nghia
+  severity: medium
+  description: Detects Cross-Site Request Forgery (CSRF) vulnerabilities by checking for missing CSRF tokens in state-changing requests.
+  reference:
+    - https://owasp.org/www-community/attacks/csrf
+  tags: csrf, security
+
+requests:
+  - method: POST
+    path:
+      - "{{BaseURL}}/update_profile.php"
+      - "{{BaseURL}}/transfer_funds.php"
+    headers:
+      Content-Type: application/x-www-form-urlencoded
+    body: "email=test@example.com"
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "Profile updated successfully"
+          - "Transfer completed"
+        part: body
+        condition: or
+      - type: dsl
+        dsl:
+          - "!contains(tolower(all_headers), 'x-csrf-token')"
+          - "!contains(tolower(all_headers), 'csrf-token')"
+        condition: and

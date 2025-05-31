@@ -1,0 +1,34 @@
+id: idor-detection
+info:
+  name: Insecure Direct Object References Detection
+  author: nghia
+  severity: high
+  description: Detects Insecure Direct Object References (IDOR) vulnerabilities by attempting to access unauthorized resources.
+  reference:
+    - https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
+  tags: idor, access-control
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/account_details.php?account_id={{randint(1,1000)}}"
+      - "{{BaseURL}}/profile.php?user_id={{randint(1,1000)}}"
+    payloads:
+      randint:
+        - "1-1000"
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "Account Number"
+          - "Balance"
+          - "Email"
+        part: body
+        condition: or
+      - type: dsl
+        dsl:
+          - "!contains(tolower(body), 'access denied')"
+          - "!contains(tolower(body), 'unauthorized')"
+        condition: and

@@ -1,0 +1,34 @@
+id: sensitive-data-exposure
+info:
+  name: Sensitive Data Exposure Detection
+  author: nghia
+  severity: high
+  description: Detects Sensitive Data Exposure by checking for exposed sensitive information in API responses or error messages.
+  reference:
+    - https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
+  tags: sensitive-data, security
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/api/user_info"
+      - "{{BaseURL}}/error.php?debug=true"
+    matchers:
+      - type: status
+        status:
+          - 200
+          - 500
+      - type: word
+        words:
+          - "password"
+          - "credit_card"
+          - "ssn"
+          - "email"
+          - "balance"
+        part: body
+        condition: or
+      - type: dsl
+        dsl:
+          - "!contains(tolower(body), 'access denied')"
+          - "!contains(tolower(body), 'unauthorized')"
+        condition: and

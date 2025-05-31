@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scan History</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .error-message {
+        color: red;
+        text-align: center;
+        margin: 20px 0;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .links {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Scan History</h1>
+
+      {% if scan_history %}
+      <table>
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Target URL</th>
+            <th>Template</th>
+            <th>Summary</th>
+            <th>Duration (seconds)</th>
+            <th>Analysis from DeepSeek</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for entry in scan_history %}
+          <tr>
+            <td>{{ entry.timestamp }}</td>
+            <td>{{ entry.url }}</td>
+            <td>{{ entry.template }}</td>
+            <td>
+              Critical: {{ entry.summary.critical }} | High: {{
+              entry.summary.high }} | Medium: {{ entry.summary.medium }} | Low:
+              {{ entry.summary.low }}
+            </td>
+            <td>{{ entry.duration }}</td>
+            <td>{{ entry.analysis | safe }}</td>
+            <td>
+              <a href="/history/{{ entry.results_file }}">View Details</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <div class="error-message">
+        <p>No scan history found. Please run a scan to create history.</p>
+      </div>
+      {% endif %}
+
+      <div class="links">
+        <a href="/">Back to Home</a>
+      </div>
+    </div>
+  </body>
+</html>

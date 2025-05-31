@@ -1,0 +1,310 @@
+[
+  {
+    "timestamp": "2025-05-17 08:22:29",
+    "url": "http://demo.testfire.net",
+    "template": "xss-detection.yaml,sql_injection_advanced.yaml,lfi-rce-detection.yaml,csrf-detection.yaml,idor-detection.yaml,ssrf-detection.yaml,bac-detection.yaml,sensitive-data-exposure.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 9
+    },
+    "duration": 195.3,
+    "results_file": "scan_results_20250517_082229.json",
+    "analysis": "The scan results for http://demo.testfire.net revealed several vulnerabilities with low severity: 1) Sensitive Data Exposure at /api/user_info and /error.php?debug=true, 2) CSRF at /update_profile.php and /transfer_funds.php, 3) Broken Access Control (BAC) at /admin, /admin/dashboard.php, and /manage_users.php, and 4) Insecure Direct Object References (IDOR) at /account_details.php?account_id=604 and /profile.php?user_id=847. Recommendations: 1) Implement proper access controls and authentication checks for sensitive endpoints, 2) Add CSRF tokens to all state-changing requests, 3) Restrict direct object references by implementing proper authorization checks, and 4) Disable debug mode in production and ensure sensitive data is not exposed in error messages or API responses."
+  },
+  {
+    "timestamp": "2025-05-17 08:28:39",
+    "url": "http://testphp.vulnweb.com",
+    "template": "xss-detection.yaml,sql_injection_advanced.yaml,lfi-rce-detection.yaml,csrf-detection.yaml,idor-detection.yaml,ssrf-detection.yaml,bac-detection.yaml,sensitive-data-exposure.yaml",
+    "summary": {
+      "critical": 5,
+      "high": 6,
+      "medium": 2,
+      "low": 15
+    },
+    "duration": 204.96,
+    "results_file": "scan_results_20250517_082839.json",
+    "analysis": "The scan results for http://testphp.vulnweb.com reveal multiple vulnerabilities:\n\n1. **Critical Vulnerabilities**:\n   - **SQL Injection (Time-based)**: Detected in multiple endpoints (e.g., listproducts.php, search.php, artists.php). Verified with payloads like `1'+OR+SLEEP(10)--`. Immediate remediation required: Use parameterized queries or prepared statements.\n   - **Remote Code Execution (RCE)**: Detected in index.php with payloads like `whoami`. Verified. Immediate action needed: Restrict command execution and sanitize inputs.\n\n2. **High Severity Vulnerabilities**:\n   - **SQL Injection (Boolean-based)**: Detected in multiple endpoints (e.g., listproducts.php, search.php). Verified with payloads like `1'+AND+1=1--`. Remediate similarly to time-based SQLi.\n\n3. **Medium Severity Vulnerabilities**:\n   - **Local File Inclusion (LFI)**: Detected in index.php with payloads like `../../../../etc/passwd`. Not verified. Sanitize file paths and implement access controls.\n\n4. **Low Severity Vulnerabilities**:\n   - **Cross-Site Scripting (XSS)**: Detected in search.php with payloads like `<script>alert('xss')</script>`. Sanitize user inputs and implement CSP headers.\n   - **Insecure Direct Object References (IDOR)**: Detected in account_details.php and profile.php. Implement proper authorization checks.\n   - **Broken Access Control (BAC)**: Detected in admin/dashboard.php and manage_users.php. Enforce role-based access controls.\n   - **CSRF**: Detected in update_profile.php and transfer_funds.php. Implement anti-CSRF tokens.\n   - **Sensitive Data Exposure**: Detected in api/user_info and error.php. Disable debug modes and enforce HTTPS.\n\n**Recommendations**:\n- Prioritize fixing critical and high-severity vulnerabilities first.\n- Implement input validation, output encoding, and parameterized queries.\n- Regularly update and patch the system.\n- Conduct a comprehensive security audit and penetration testing."
+  },
+  {
+    "timestamp": "2025-05-17 13:41:40",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "sql_injection_advanced.yaml",
+    "summary": {
+      "critical": 3,
+      "high": 6,
+      "medium": 0,
+      "low": 3
+    },
+    "duration": 196.19,
+    "results_file": "scan_results_20250517_134140.json",
+    "analysis": "Analysis not available for manual scan."
+  },
+  {
+    "timestamp": "2025-05-17 13:46:15",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "xss-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 3
+    },
+    "duration": 184.17,
+    "results_file": "scan_results_20250517_134615.json",
+    "analysis": "Analysis not available for manual scan."
+  },
+  {
+    "timestamp": "2025-05-17 13:49:30",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 2,
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "duration": 184.93,
+    "results_file": "scan_results_20250517_134930.json",
+    "analysis": "Analysis not available for manual scan."
+  },
+  {
+    "timestamp": "2025-05-17 13:53:12",
+    "url": "http://demo.testfire.net",
+    "template": "ssrf-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 189.12,
+    "results_file": "scan_results_20250517_135312.json",
+    "analysis": "The scan results for http://demo.testfire.net using the SSRF detection template did not identify any vulnerabilities. No further action is required for SSRF vulnerabilities at this time."
+  },
+  {
+    "timestamp": "2025-05-17 13:57:23",
+    "url": "http://demo.testfire.net",
+    "template": "sensitive-data-exposure.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "duration": 196.17,
+    "results_file": "scan_results_20250517_135723.json",
+    "analysis": "The scan results indicate two instances of Sensitive Data Exposure vulnerabilities at http://demo.testfire.net. Both vulnerabilities are classified as 'low' severity. The first vulnerability was detected at 'http://demo.testfire.net/api/user_info', and the second at 'http://demo.testfire.net/error.php?debug=true'. These findings suggest that sensitive information may be exposed in API responses or error messages. Recommendations: 1. Review and secure the API endpoints to ensure sensitive data is not exposed. 2. Disable debug mode in production environments to prevent leakage of sensitive information through error messages. 3. Implement proper error handling to avoid exposing internal system details. 4. Regularly scan and monitor for sensitive data exposure to maintain security compliance."
+  },
+  {
+    "timestamp": "2025-05-17 18:09:30",
+    "url": "http://demo.testfire.net",
+    "template": "xss-detection.yaml,sql_injection_advanced.yaml,lfi-rce-detection.yaml,csrf-detection.yaml,idor-detection.yaml,ssrf-detection.yaml,bac-detection.yaml,sensitive-data-exposure.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 9
+    },
+    "duration": 196.39,
+    "results_file": "scan_results_20250517_180930.json",
+    "analysis": "Analysis of scan results for http://demo.testfire.net revealed multiple vulnerabilities:\n\n1. CSRF vulnerabilities detected at /update_profile.php and /transfer_funds.php. Recommendations: Implement CSRF tokens for state-changing requests.\n2. Broken Access Control (BAC) vulnerabilities detected at /admin, /admin/dashboard.php, and /manage_users.php. Recommendations: Enforce proper authorization checks for admin endpoints.\n3. Sensitive Data Exposure detected at /api/user_info and /error.php?debug=true. Recommendations: Disable debug mode in production and ensure sensitive API endpoints implement proper access controls.\n4. IDOR vulnerabilities detected at /account_details.php?account_id=256 and /profile.php?user_id=691. Recommendations: Implement proper object-level authorization checks.\n\nAll vulnerabilities were rated as low severity. Immediate remediation is recommended for all findings to improve application security."
+  },
+  {
+    "timestamp": "2025-05-17 19:20:35",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "sql_injection_advanced.yaml",
+    "summary": {
+      "critical": 3,
+      "high": 6,
+      "medium": 0,
+      "low": 3
+    },
+    "duration": 190.58,
+    "results_file": "scan_results_20250517_192035.json",
+    "analysis": "Analysis not available for manual scan."
+  },
+  {
+    "timestamp": "2025-05-17 19:37:29",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 2,
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "duration": 186.51,
+    "results_file": "scan_results_20250517_193729.json",
+    "analysis": "Analysis not available for manual scan."
+  },
+  {
+    "timestamp": "2025-05-17 19:42:13",
+    "url": "http://testphp.vulnweb.com",
+    "template": "xss-detection.yaml,sql_injection_advanced.yaml,lfi-rce-detection.yaml,csrf-detection.yaml,idor-detection.yaml,ssrf-detection.yaml,bac-detection.yaml,sensitive-data-exposure.yaml",
+    "summary": {
+      "critical": 5,
+      "high": 6,
+      "medium": 2,
+      "low": 15
+    },
+    "duration": 207.87,
+    "results_file": "scan_results_20250517_194213.json",
+    "analysis": "The scan results for http://testphp.vulnweb.com revealed multiple vulnerabilities across various categories. Here's a summary and recommendations:\n\n1. **SQL Injection (Critical/High Severity)**: Multiple instances were found, including time-based, boolean-based, and union-based SQLi. These vulnerabilities can lead to unauthorized database access. Recommendations: Implement prepared statements with parameterized queries, enforce strict input validation, and use web application firewalls (WAFs).\n\n2. **Local File Inclusion (LFI) & Remote Code Execution (RCE) (Medium/Critical Severity)**: LFI vulnerabilities were detected with attempts to access sensitive files like /etc/passwd. RCE was verified with commands like 'whoami'. Recommendations: Disable dynamic file inclusion, implement strict file path validation, and restrict server permissions.\n\n3. **Cross-Site Scripting (XSS) (Low Severity)**: Several XSS vectors were identified. Recommendations: Implement output encoding, use Content Security Policy (CSP) headers, and sanitize all user inputs.\n\n4. **Broken Access Control (BAC) (Low Severity)**: Unauthorized access to admin areas was detected. Recommendations: Implement proper role-based access control (RBAC), enforce authentication checks, and restrict sensitive endpoints.\n\n5. **Cross-Site Request Forgery (CSRF) (Low Severity)**: Potential CSRF vulnerabilities were found in forms. Recommendations: Implement anti-CSRF tokens and enforce same-site cookie attributes.\n\n6. **Sensitive Data Exposure (Low Severity)**: Exposed sensitive information in API responses and error messages. Recommendations: Disable detailed error messages in production, implement proper logging without sensitive data, and use encryption for sensitive data.\n\n7. **Insecure Direct Object References (IDOR) (Low Severity)**: Potential IDOR vulnerabilities were detected. Recommendations: Implement proper authorization checks and use indirect object references.\n\nGeneral Recommendations:\n- Prioritize fixing critical SQLi and RCE vulnerabilities first.\n- Conduct a thorough code review focusing on input validation and output encoding.\n- Update all frameworks and libraries to their latest secure versions.\n- Implement regular security testing and monitoring.\n- Consider engaging a professional penetration testing service for a comprehensive assessment."
+  },
+  {
+    "timestamp": "2025-05-24 13:19:20",
+    "url": "http://demo.testfire.net",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "duration": 239.72,
+    "results_file": "scan_results_20250524_131920.json",
+    "analysis": "Analysis not available for manual scan."
+  },
+  {
+    "timestamp": "2025-05-28 14:11:13",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 2,
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "duration": 310.35,
+    "results_file": "scan_results_20250528_141113.json",
+    "analysis": "Analysis not available for manual scan."
+  },
+  {
+    "timestamp": "2025-05-28 14:11:29",
+    "url": "http://demo.testfire.net",
+    "template": "xss-detection.yaml,sql_injection_advanced.yaml,lfi-rce-detection.yaml,csrf-detection.yaml,idor-detection.yaml,ssrf-detection.yaml,bac-detection.yaml,sensitive-data-exposure.yaml",
+    "summary": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 9
+    },
+    "duration": 264.77,
+    "results_file": "scan_results_20250528_141129.json",
+    "analysis": "The scan results for http://demo.testfire.net reveal several vulnerabilities, primarily categorized as low severity. Key findings include:\n\n1. **Broken Access Control (BAC)**: Detected at multiple admin endpoints (/admin, /admin/dashboard.php, /manage_users.php). Recommendations: Implement proper access control checks and role-based authentication.\n\n2. **CSRF Vulnerabilities**: Found in /update_profile.php and /transfer_funds.php. Recommendations: Add anti-CSRF tokens and enforce same-origin policies.\n\n3. **IDOR Issues**: Identified in /profile.php and /account_details.php with exposed user/account IDs. Recommendations: Use indirect object references or UUIDs instead of sequential IDs.\n\n4. **Sensitive Data Exposure**: Detected in /api/user_info and /error.php (debug mode). Recommendations: Disable debug mode in production and implement proper data masking for APIs.\n\nOverall, while the vulnerabilities are marked as low severity, they collectively represent significant security risks. Prioritize fixing BAC and CSRF issues first, followed by IDOR and data exposure. Regular security audits and penetration testing are recommended."
+  },
+  {
+    "timestamp": "2025-05-28 14:21:13",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 2,
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "duration": 228.43,
+    "results_file": "scan_results_20250528_142113.json",
+    "analysis": "Analysis not available for manual scan."
+  },
+  {
+    "timestamp": "2025-05-28 14:28:28",
+    "url": "http://testphp.vulnweb.com",
+    "template": "xss-detection.yaml,sql_injection_advanced.yaml,lfi-rce-detection.yaml,csrf-detection.yaml,idor-detection.yaml,ssrf-detection.yaml,bac-detection.yaml,sensitive-data-exposure.yaml",
+    "summary": {
+      "critical": 5,
+      "high": 6,
+      "medium": 2,
+      "low": 15
+    },
+    "duration": 208.37,
+    "results_file": "scan_results_20250528_142828.json",
+    "analysis": "The scan results reveal multiple vulnerabilities across different categories:\n\n1. **SQL Injection (Critical/High Severity)**: Multiple instances found with time-based, boolean-based, and union-based techniques. Verified vulnerabilities indicate exploitable SQL injection points.\n\n2. **Local File Inclusion (LFI) / Remote Code Execution (RCE)**: Medium to critical severity findings, including verified RCE via command injection (e.g., `whoami`).\n\n3. **Cross-Site Scripting (XSS)**: Low-severity reflected XSS detected via `<script>`, `<img>`, and `<svg>` payloads.\n\n4. **Broken Access Control (BAC)**: Unauthorized access to admin endpoints (`/admin`, `/manage_users.php`).\n\n5. **Insecure Direct Object References (IDOR)**: Access to user profiles/accounts via direct ID manipulation.\n\n6. **Sensitive Data Exposure**: Debug endpoints (`/error.php?debug=true`) and API endpoints exposing user info.\n\n7. **Cross-Site Request Forgery (CSRF)**: Missing CSRF tokens in state-changing requests (e.g., `/transfer_funds.php`).\n\n### Recommendations:\n- **Immediate Action**: Patch SQLi and RCE vulnerabilities due to high exploitability. Sanitize inputs and use prepared statements.\n- **Access Control**: Implement role-based access checks for admin endpoints and enforce session validation.\n- **Output Encoding**: Mitigate XSS by encoding user-controlled data in HTML/JS contexts.\n- **CSRF Tokens**: Add anti-CSRF tokens to all state-changing forms/requests.\n- **Debug Disable**: Disable debug modes in production to prevent data leaks.\n- **Regular Scans**: Schedule recurring scans to monitor for new vulnerabilities."
+  },
+  {
+    "timestamp": "2025-05-28 14:31:49",
+    "url": "http://testphp.vulnweb.com",
+    "template": "xss-detection.yaml,sql_injection_advanced.yaml,lfi-rce-detection.yaml,csrf-detection.yaml,idor-detection.yaml,ssrf-detection.yaml,bac-detection.yaml,sensitive-data-exposure.yaml",
+    "summary": {
+      "critical": 5,
+      "high": 6,
+      "medium": 2,
+      "low": 15
+    },
+    "duration": 209.61,
+    "results_file": "scan_results_20250528_143149.json",
+    "analysis": "The scan results for http://testphp.vulnweb.com reveal multiple vulnerabilities across various categories. Here's a summary and recommendations:\n\n1. **SQL Injection (Critical/High Severity)**: Multiple instances found with time-based, boolean-based, and union-based techniques. Recommendations: Implement prepared statements with parameterized queries, use stored procedures, and enforce input validation.\n\n2. **Cross-Site Scripting (XSS) (Low Severity)**: Detected in search.php with various payloads. Recommendations: Implement output encoding, use Content Security Policy (CSP), and sanitize user inputs.\n\n3. **Local File Inclusion (LFI) (Medium Severity)**: Detected with attempts to access /etc/passwd. Recommendations: Disable directory traversal, use whitelisting for file access, and enforce proper file permissions.\n\n4. **Remote Code Execution (RCE) (Critical Severity)**: Verified instances found. Recommendations: Disable dangerous functions, implement strict input validation, and use secure coding practices.\n\n5. **CSRF (Low Severity)**: Detected in update_profile.php and transfer_funds.php. Recommendations: Implement anti-CSRF tokens, enforce same-site cookies, and use secure headers.\n\n6. **IDOR (Low Severity)**: Found in profile.php and account_details.php. Recommendations: Implement proper access controls, use indirect object references, and enforce authorization checks.\n\n7. **Sensitive Data Exposure (Low Severity)**: Detected in api/user_info and error.php. Recommendations: Disable debug modes, implement proper error handling, and ensure sensitive data is encrypted.\n\n8. **Broken Access Control (BAC) (Low Severity)**: Found in admin and manage_users.php. Recommendations: Implement role-based access control (RBAC), enforce authentication, and audit access logs.\n\n**General Recommendations**: Regularly update and patch systems, conduct security training for developers, and perform periodic security assessments. Prioritize fixing critical and high-severity vulnerabilities first."
+  },
+  {
+    "timestamp": "2025-05-28 14:31:49",
+    "url": "http://testphp.vulnweb.com",
+    "template": "xss-detection.yaml,sql_injection_advanced.yaml,lfi-rce-detection.yaml,csrf-detection.yaml,idor-detection.yaml,ssrf-detection.yaml,bac-detection.yaml,sensitive-data-exposure.yaml",
+    "summary": {
+      "critical": 5,
+      "high": 6,
+      "medium": 2,
+      "low": 15
+    },
+    "duration": 208.37,
+    "results_file": "scan_results_20250528_143149.json",
+    "analysis": "The scan results reveal multiple vulnerabilities across different categories:\n\n1. **SQL Injection (Critical/High Severity)**: Multiple instances of SQL Injection vulnerabilities were detected, including time-based, union-based, and boolean-based techniques. These vulnerabilities are critical as they can lead to unauthorized database access. Recommendations: Implement parameterized queries, use prepared statements, and enforce strict input validation.\n\n2. **Cross-Site Scripting (XSS) (Low Severity)**: Several XSS vulnerabilities were found, allowing attackers to inject malicious scripts. Recommendations: Implement output encoding, use Content Security Policy (CSP), and validate/sanitize user inputs.\n\n3. **Local File Inclusion (LFI) / Remote Code Execution (RCE) (Critical/Medium Severity)**: LFI and RCE vulnerabilities were detected, which could allow attackers to read sensitive files or execute arbitrary commands. Recommendations: Disable file inclusion functionalities if not needed, enforce strict file path validations, and use whitelisting for allowed files.\n\n4. **Insecure Direct Object References (IDOR) (Low Severity)**: IDOR vulnerabilities were found, potentially allowing unauthorized access to resources. Recommendations: Implement proper access controls and use indirect object references.\n\n5. **Broken Access Control (BAC) (Low Severity)**: BAC vulnerabilities were detected, indicating potential unauthorized access to restricted areas. Recommendations: Enforce role-based access controls (RBAC) and ensure proper authentication checks.\n\n6. **Sensitive Data Exposure (Low Severity)**: Instances of sensitive data exposure were found, which could lead to information leakage. Recommendations: Ensure sensitive data is encrypted, disable debug modes in production, and implement proper error handling.\n\n7. **Cross-Site Request Forgery (CSRF) (Low Severity)**: CSRF vulnerabilities were detected, which could allow attackers to perform unauthorized actions on behalf of users. Recommendations: Implement anti-CSRF tokens and enforce same-site cookie attributes.\n\n**General Recommendations**: Regularly update and patch all systems, conduct periodic security assessments, and educate developers on secure coding practices. Prioritize fixing critical vulnerabilities first, followed by high and medium severity issues."
+  },
+  {
+    "timestamp": "2025-05-28 14:31:56",
+    "url": "http://testphp.vulnweb.com",
+    "template": "xss-detection.yaml,sql_injection_advanced.yaml,lfi-rce-detection.yaml,csrf-detection.yaml,idor-detection.yaml,ssrf-detection.yaml,bac-detection.yaml,sensitive-data-exposure.yaml",
+    "summary": {
+      "critical": 5,
+      "high": 6,
+      "medium": 2,
+      "low": 15
+    },
+    "duration": 208.97,
+    "results_file": "scan_results_20250528_143156.json",
+    "analysis": "The scan results reveal multiple vulnerabilities on the target URL http://testphp.vulnweb.com. Here's a summary and recommendations:\n\n1. **SQL Injection (Critical/High Severity)**: Multiple instances found with time-based, boolean-based, and union-based techniques. Immediate remediation is required. Recommendations:\n   - Use prepared statements with parameterized queries.\n   - Implement input validation and sanitization.\n   - Apply least privilege principles to database accounts.\n\n2. **Cross-Site Scripting (XSS) (Low Severity)**: Several reflected XSS vulnerabilities detected. Recommendations:\n   - Implement output encoding for user-controlled data.\n   - Use Content Security Policy (CSP) headers.\n   - Enable HttpOnly and Secure flags for cookies.\n\n3. **Local File Inclusion (LFI) (Medium Severity)**: Potential LFI vulnerabilities detected. Recommendations:\n   - Restrict file system access to web directories.\n   - Use whitelists for allowed file paths.\n   - Disable dangerous PHP functions (e.g., include, require).\n\n4. **Remote Code Execution (RCE) (Critical Severity)**: Verified RCE vulnerabilities found. Critical priority for remediation. Recommendations:\n   - Immediately patch affected components.\n   - Implement strict input validation.\n   - Disable execution of system commands from user input.\n\n5. **Broken Access Control (BAC) (Low Severity)**: Unprotected admin interfaces detected. Recommendations:\n   - Implement proper authentication and authorization checks.\n   - Enforce role-based access control (RBAC).\n   - Regularly audit access control mechanisms.\n\n6. **Insecure Direct Object References (IDOR) (Low Severity)**: Potential IDOR vulnerabilities found. Recommendations:\n   - Implement proper authorization checks for all object references.\n   - Use indirect object references where possible.\n   - Log and monitor access to sensitive resources.\n\n7. **Cross-Site Request Forgery (CSRF) (Low Severity)**: Missing CSRF tokens detected. Recommendations:\n   - Implement CSRF tokens for all state-changing requests.\n   - Use SameSite cookie attributes.\n   - Consider double-submit cookie pattern.\n\n8. **Sensitive Data Exposure (Low Severity)**: Potential information leaks detected. Recommendations:\n   - Disable debug modes in production.\n   - Implement proper error handling without exposing sensitive information.\n   - Encrypt sensitive data in transit and at rest.\n\nGeneral Recommendations:\n- Conduct a thorough code review focusing on the identified vulnerabilities.\n- Implement a Web Application Firewall (WAF) as a temporary mitigation.\n- Establish a regular vulnerability scanning and penetration testing schedule.\n- Provide security awareness training for developers on secure coding practices.\n\nPriority should be given to the critical SQL Injection and RCE vulnerabilities, followed by the medium severity LFI issues. All findings should be addressed as part of a comprehensive security improvement program."
+  },
+  {
+    "timestamp": "2025-05-28 14:33:15",
+    "url": "http://testphp.vulnweb.com",
+    "template": "xss-detection.yaml,sql_injection_advanced.yaml,lfi-rce-detection.yaml,csrf-detection.yaml,idor-detection.yaml,ssrf-detection.yaml,bac-detection.yaml,sensitive-data-exposure.yaml",
+    "summary": {
+      "critical": 5,
+      "high": 6,
+      "medium": 2,
+      "low": 15
+    },
+    "duration": 207.95,
+    "results_file": "scan_results_20250528_143315.json",
+    "analysis": "The scan results for http://testphp.vulnweb.com reveal multiple vulnerabilities across various categories:\n\n1. **Critical Vulnerabilities**:\n   - **SQL Injection**: Multiple instances found with time-based and boolean-based verification (e.g., `listproducts.php?cat=1'+OR+SLEEP(10)--`, `artists.php?artist=1'+AND+1=1--`).\n   - **Remote Code Execution (RCE)**: Verified RCE at `index.php?cmd=whoami` and `index.php?file=whoami`.\n\n2. **High Severity**:\n   - **SQL Injection**: Boolean-based SQLi verified at several endpoints (e.g., `search.php?test=1'+AND+1=2--`).\n\n3. **Medium Severity**:\n   - **Local File Inclusion (LFI)**: Potential LFI at `index.php?file=../../../../etc/passwd` (unverified).\n\n4. **Low Severity**:\n   - **Cross-Site Scripting (XSS)**: Multiple XSS payloads detected (e.g., `<script>alert('xss')</script>`).\n   - **Broken Access Control (BAC)**: Unauthorized access to `/admin/dashboard.php` and `/manage_users.php`.\n   - **Insecure Direct Object References (IDOR)**: Access to `profile.php?user_id=106` and `account_details.php?account_id=930`.\n   - **Sensitive Data Exposure**: Potential exposure at `/api/user_info` and `/error.php?debug=true`.\n   - **Cross-Site Request Forgery (CSRF)**: Potential CSRF at `/update_profile.php` and `/transfer_funds.php`.\n\n**Recommendations**:\n1. **Immediate Action**:\n   - Patch SQL Injection vulnerabilities using parameterized queries or prepared statements.\n   - Restrict command execution (`whoami`) and file access (`/etc/passwd`) via input validation and server hardening.\n2. **High Priority**:\n   - Implement proper access controls for admin endpoints (`/admin/`, `/manage_users.php`).\n   - Sanitize user input to prevent XSS (e.g., encode output).\n3. **General**:\n   - Enable CSRF tokens for state-changing requests.\n   - Review error handling to avoid exposing sensitive data in debug modes.\n   - Audit IDOR vulnerabilities by enforcing authorization checks.\n\nAll findings should be addressed per OWASP guidelines referenced in the scan results."
+  },
+  {
+    "timestamp": "2025-05-30 15:01:15",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 2,
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "duration": 186.26,
+    "results_file": "scan_results_20250530_150115.json",
+    "analysis": "Analysis not available for manual scan."
+  },
+  {
+    "timestamp": "2025-05-30 16:13:19",
+    "url": "http://testphp.vulnweb.com/",
+    "template": "lfi-rce-detection.yaml",
+    "summary": {
+      "critical": 2,
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "duration": 187.94,
+    "results_file": "scan_results_20250530_161319.json",
+    "analysis": "Analysis not available for manual scan."
+  }
+]

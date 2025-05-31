@@ -1,0 +1,30 @@
+id: xss-detection
+info:
+  name: XSS Detection
+  author: nghia
+  severity: high
+  description: Detects Reflected Cross-Site Scripting (XSS) vulnerabilities.
+  reference:
+    - https://owasp.org/www-community/attacks/XSS
+  tags: xss, injection
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/search.php?test={{payload}}"
+    payloads:
+      payload:
+        - "<script>alert('xss')</script>"
+        - "<img src=x onerror=alert('xss')>"
+        - "<svg onload=alert('xss')>"
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "alert('xss')"
+          - "netsparker(0x004E37)"
+          - "xss"
+          - "netsparker"
+        part: body
+        condition: or

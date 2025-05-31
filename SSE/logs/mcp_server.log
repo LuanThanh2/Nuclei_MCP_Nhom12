@@ -1,0 +1,172 @@
+2025-05-29 16:24:41,172 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-29 16:24:41,172 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-29 16:24:41,173 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -no-interactsh -rate-limit 1
+2025-05-29 16:24:55,582 - INFO:Nuclei output: {"template-id":"lfi-rce-detection","template-path":"/app/scanner/templates/lfi-rce-detection.yaml","template-encoded":"aWQ6IGxmaS1yY2UtZGV0ZWN0aW9uDQppbmZvOg0KICBuYW1lOiBMRkkgYW5kIFJDRSBEZXRlY3Rpb24NCiAgYXV0aG9yOiBuZ2hpYQ0KICBzZXZlcml0eTogY3JpdGljYWwNCiAgZGVzY3JpcHRpb246IERldGVjdHMgTG9jYWwgRmlsZSBJbmNsdXNpb24gKExGSSkgYW5kIFJlbW90ZSBDb2RlIEV4ZWN1dGlvbiAoUkNFKSB2dWxuZXJhYmlsaXRpZXMuDQogIHJlZmVyZW5jZToNCiAgICAtIGh0dHBzOi8vb3dhc3Aub3JnL3d3dy1jb21tdW5pdHkvYXR0YWNrcy9Mb2NhbF9GaWxlX0luY2x1c2lvbg0KICAgI
+2025-05-29 16:24:55,585 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-29 16:24:55.585359
+2025-05-29 16:25:21,538 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-29 16:25:21,539 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-29 16:25:21,540 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -no-interactsh -rate-limit 1
+2025-05-29 16:25:25,783 - INFO:Nuclei output: {"template-id":"lfi-rce-detection","template-path":"/app/scanner/templates/lfi-rce-detection.yaml","template-encoded":"aWQ6IGxmaS1yY2UtZGV0ZWN0aW9uDQppbmZvOg0KICBuYW1lOiBMRkkgYW5kIFJDRSBEZXRlY3Rpb24NCiAgYXV0aG9yOiBuZ2hpYQ0KICBzZXZlcml0eTogY3JpdGljYWwNCiAgZGVzY3JpcHRpb246IERldGVjdHMgTG9jYWwgRmlsZSBJbmNsdXNpb24gKExGSSkgYW5kIFJlbW90ZSBDb2RlIEV4ZWN1dGlvbiAoUkNFKSB2dWxuZXJhYmlsaXRpZXMuDQogIHJlZmVyZW5jZToNCiAgICAtIGh0dHBzOi8vb3dhc3Aub3JnL3d3dy1jb21tdW5pdHkvYXR0YWNrcy9Mb2NhbF9GaWxlX0luY2x1c2lvbg0KICAgI
+2025-05-29 16:25:25,786 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-29 16:25:25.786301
+2025-05-29 16:30:20,723 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://demo.testfire.net"], "template_paths": ["scanner/templates/xss-detection.yaml"]}}, "id": 1}
+2025-05-29 16:30:20,724 - INFO:Processing nuclei_scan with URLs: http://demo.testfire.net, Templates: ['scanner/templates/xss-detection.yaml']
+2025-05-29 16:30:20,725 - INFO:Running Nuclei command: nuclei -u http://demo.testfire.net -t scanner/templates/xss-detection.yaml -jsonl -silent -no-color -no-interactsh -rate-limit 1
+2025-05-29 16:30:27,859 - INFO:Nuclei output: 
+2025-05-29 16:30:27,860 - ERROR:Nuclei returned no output
+2025-05-29 16:31:00,377 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-29 16:31:00,377 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-29 16:31:00,378 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -no-interactsh -rate-limit 1
+2025-05-29 16:31:04,663 - INFO:Nuclei output: {"template-id":"lfi-rce-detection","template-path":"/app/scanner/templates/lfi-rce-detection.yaml","template-encoded":"aWQ6IGxmaS1yY2UtZGV0ZWN0aW9uDQppbmZvOg0KICBuYW1lOiBMRkkgYW5kIFJDRSBEZXRlY3Rpb24NCiAgYXV0aG9yOiBuZ2hpYQ0KICBzZXZlcml0eTogY3JpdGljYWwNCiAgZGVzY3JpcHRpb246IERldGVjdHMgTG9jYWwgRmlsZSBJbmNsdXNpb24gKExGSSkgYW5kIFJlbW90ZSBDb2RlIEV4ZWN1dGlvbiAoUkNFKSB2dWxuZXJhYmlsaXRpZXMuDQogIHJlZmVyZW5jZToNCiAgICAtIGh0dHBzOi8vb3dhc3Aub3JnL3d3dy1jb21tdW5pdHkvYXR0YWNrcy9Mb2NhbF9GaWxlX0luY2x1c2lvbg0KICAgI
+2025-05-29 16:31:04,666 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-29 16:31:04.666287
+2025-05-29 16:31:42,246 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/csrf-detection.yaml"]}}, "id": 1}
+2025-05-29 16:31:42,247 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/csrf-detection.yaml']
+2025-05-29 16:31:42,248 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/csrf-detection.yaml -jsonl -silent -no-color -no-interactsh -rate-limit 1
+2025-05-29 16:31:45,953 - INFO:Nuclei output: {"template-id":"csrf-detection","template-path":"/app/scanner/templates/csrf-detection.yaml","template-encoded":"aWQ6IGNzcmYtZGV0ZWN0aW9uDQppbmZvOg0KICBuYW1lOiBDU1JGIERldGVjdGlvbg0KICBhdXRob3I6IG5naGlhDQogIHNldmVyaXR5OiBtZWRpdW0NCiAgZGVzY3JpcHRpb246IERldGVjdHMgQ3Jvc3MtU2l0ZSBSZXF1ZXN0IEZvcmdlcnkgKENTUkYpIHZ1bG5lcmFiaWxpdGllcyBieSBjaGVja2luZyBmb3IgbWlzc2luZyBDU1JGIHRva2VucyBpbiBzdGF0ZS1jaGFuZ2luZyByZXF1ZXN0cy4NCiAgcmVmZXJlbmNlOg0KICAgIC0gaHR0cHM6Ly9vd2FzcC5vcmcvd3d3LWNvbW11bml0eS9hdHRhY2tzL2NzcmY
+2025-05-29 16:31:45,955 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-29 16:31:45.955452
+2025-05-29 16:33:36,619 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/csrf-detection.yaml"]}}, "id": 1}
+2025-05-29 16:33:36,620 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/csrf-detection.yaml']
+2025-05-29 16:33:36,621 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/csrf-detection.yaml -jsonl -silent -no-color -no-interactsh -rate-limit 1
+2025-05-29 16:33:40,468 - INFO:Nuclei output: {"template-id":"csrf-detection","template-path":"/app/scanner/templates/csrf-detection.yaml","template-encoded":"aWQ6IGNzcmYtZGV0ZWN0aW9uDQppbmZvOg0KICBuYW1lOiBDU1JGIERldGVjdGlvbg0KICBhdXRob3I6IG5naGlhDQogIHNldmVyaXR5OiBtZWRpdW0NCiAgZGVzY3JpcHRpb246IERldGVjdHMgQ3Jvc3MtU2l0ZSBSZXF1ZXN0IEZvcmdlcnkgKENTUkYpIHZ1bG5lcmFiaWxpdGllcyBieSBjaGVja2luZyBmb3IgbWlzc2luZyBDU1JGIHRva2VucyBpbiBzdGF0ZS1jaGFuZ2luZyByZXF1ZXN0cy4NCiAgcmVmZXJlbmNlOg0KICAgIC0gaHR0cHM6Ly9vd2FzcC5vcmcvd3d3LWNvbW11bml0eS9hdHRhY2tzL2NzcmY
+2025-05-29 16:33:40,471 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-29 16:33:40.471341
+2025-05-30 07:55:26,732 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-30 07:55:26,732 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-30 07:55:26,733 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -no-interactsh -rate-limit 1
+2025-05-30 07:56:33,236 - INFO:Nuclei output: {"template-id":"lfi-rce-detection","template-path":"/app/scanner/templates/lfi-rce-detection.yaml","template-encoded":"aWQ6IGxmaS1yY2UtZGV0ZWN0aW9uDQppbmZvOg0KICBuYW1lOiBMRkkgYW5kIFJDRSBEZXRlY3Rpb24NCiAgYXV0aG9yOiBuZ2hpYQ0KICBzZXZlcml0eTogY3JpdGljYWwNCiAgZGVzY3JpcHRpb246IERldGVjdHMgTG9jYWwgRmlsZSBJbmNsdXNpb24gKExGSSkgYW5kIFJlbW90ZSBDb2RlIEV4ZWN1dGlvbiAoUkNFKSB2dWxuZXJhYmlsaXRpZXMuDQogIHJlZmVyZW5jZToNCiAgICAtIGh0dHBzOi8vb3dhc3Aub3JnL3d3dy1jb21tdW5pdHkvYXR0YWNrcy9Mb2NhbF9GaWxlX0luY2x1c2lvbg0KICAgI
+2025-05-30 07:56:33,239 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-30 07:56:33.239035
+2025-05-30 08:18:45,221 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-30 08:18:45,221 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-30 08:18:45,222 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-30 08:19:51,229 - INFO:Nuclei output: {"template-id":"lfi-rce-detection","template-path":"/app/scanner/templates/lfi-rce-detection.yaml","template-encoded":"aWQ6IGxmaS1yY2UtZGV0ZWN0aW9uDQppbmZvOg0KICBuYW1lOiBMRkkgYW5kIFJDRSBEZXRlY3Rpb24NCiAgYXV0aG9yOiBuZ2hpYQ0KICBzZXZlcml0eTogY3JpdGljYWwNCiAgZGVzY3JpcHRpb246IERldGVjdHMgTG9jYWwgRmlsZSBJbmNsdXNpb24gKExGSSkgYW5kIFJlbW90ZSBDb2RlIEV4ZWN1dGlvbiAoUkNFKSB2dWxuZXJhYmlsaXRpZXMuDQogIHJlZmVyZW5jZToNCiAgICAtIGh0dHBzOi8vb3dhc3Aub3JnL3d3dy1jb21tdW5pdHkvYXR0YWNrcy9Mb2NhbF9GaWxlX0luY2x1c2lvbg0KICAgI
+2025-05-30 08:19:53,195 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-30 08:19:53.195896
+2025-05-30 08:20:02,472 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-30 08:20:02,472 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-30 08:20:02,473 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-30 08:20:36,499 - INFO:Nuclei output: {"template-id":"lfi-rce-detection","template-path":"/app/scanner/templates/lfi-rce-detection.yaml","template-encoded":"aWQ6IGxmaS1yY2UtZGV0ZWN0aW9uDQppbmZvOg0KICBuYW1lOiBMRkkgYW5kIFJDRSBEZXRlY3Rpb24NCiAgYXV0aG9yOiBuZ2hpYQ0KICBzZXZlcml0eTogY3JpdGljYWwNCiAgZGVzY3JpcHRpb246IERldGVjdHMgTG9jYWwgRmlsZSBJbmNsdXNpb24gKExGSSkgYW5kIFJlbW90ZSBDb2RlIEV4ZWN1dGlvbiAoUkNFKSB2dWxuZXJhYmlsaXRpZXMuDQogIHJlZmVyZW5jZToNCiAgICAtIGh0dHBzOi8vb3dhc3Aub3JnL3d3dy1jb21tdW5pdHkvYXR0YWNrcy9Mb2NhbF9GaWxlX0luY2x1c2lvbg0KICAgI
+2025-05-30 08:20:38,459 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-30 08:20:38.459244
+2025-05-30 09:02:37,993 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-30 09:02:37,993 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-30 09:02:37,998 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-30 09:09:32,720 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-30 09:09:32,720 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-30 09:09:32,727 - ERROR:Invalid URL: 
+2025-05-30 09:09:34,176 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-30 09:09:34,176 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-30 09:09:34,177 - ERROR:Invalid URL: 
+2025-05-30 09:09:41,698 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-30 09:09:41,699 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-30 09:09:41,700 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-30 09:10:10,542 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-30 09:10:10,543 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-30 09:10:10,545 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-30 09:10:15,314 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-30 09:10:15.314682
+2025-05-30 09:11:42,389 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-30 09:11:42,390 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-30 09:11:42,392 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-30 09:11:44,514 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-30 09:11:44,515 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-30 09:11:44,517 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-30 09:11:50,037 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-30 09:11:50.037545
+2025-05-31 01:07:32,945 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-31 01:07:32,945 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-31 01:07:32,949 - ERROR:Invalid URL: 
+2025-05-31 01:07:51,606 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-31 01:07:51,606 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-31 01:07:51,609 - ERROR:Invalid URL: 
+2025-05-31 01:09:19,156 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-31 01:09:19,156 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-31 01:09:19,162 - ERROR:Invalid URL: 
+2025-05-31 01:09:28,823 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-31 01:09:28,823 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-31 01:09:28,825 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-31 01:09:55,587 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-31 01:09:55,588 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-31 01:09:55,589 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-31 01:10:00,359 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-31 01:10:00.359910
+2025-05-31 01:10:08,666 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-31 01:10:08,667 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-31 01:10:08,670 - ERROR:Invalid URL: 
+2025-05-31 01:11:16,205 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-31 01:11:16,205 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-31 01:11:16,210 - ERROR:Invalid URL: 
+2025-05-31 01:11:22,076 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-31 01:11:22,076 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-31 01:11:22,081 - ERROR:Invalid URL: 
+2025-05-31 01:26:01,941 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-31 01:26:01,942 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-31 01:26:01,947 - ERROR:Invalid URL: 
+2025-05-31 01:27:24,936 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-31 01:27:24,937 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-31 01:27:24,938 - ERROR:Invalid URL: 
+2025-05-31 01:31:10,277 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-31 01:31:10,278 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-31 01:31:10,289 - ERROR:Invalid URL: 
+2025-05-31 01:31:15,345 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/default.yaml"]}}, "id": 1}
+2025-05-31 01:31:15,345 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/default.yaml']
+2025-05-31 01:31:15,346 - ERROR:Template file not found: scanner/templates/default.yaml
+2025-05-31 01:31:15,392 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/default.yaml"]}}, "id": 1}
+2025-05-31 01:31:15,403 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/default.yaml']
+2025-05-31 01:31:15,420 - ERROR:Template file not found: scanner/templates/default.yaml
+2025-05-31 01:31:17,037 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/default.yaml"]}}, "id": 1}
+2025-05-31 01:31:17,037 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/default.yaml']
+2025-05-31 01:31:17,039 - ERROR:Template file not found: scanner/templates/default.yaml
+2025-05-31 01:31:17,993 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/default.yaml"]}}, "id": 1}
+2025-05-31 01:31:17,993 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/default.yaml']
+2025-05-31 01:31:17,995 - ERROR:Template file not found: scanner/templates/default.yaml
+2025-05-31 01:31:32,910 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/default.yaml"]}}, "id": 1}
+2025-05-31 01:31:32,911 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/default.yaml']
+2025-05-31 01:31:32,911 - ERROR:Template file not found: scanner/templates/default.yaml
+2025-05-31 01:31:32,957 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/default.yaml"]}}, "id": 1}
+2025-05-31 01:31:32,958 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/default.yaml']
+2025-05-31 01:31:32,959 - ERROR:Template file not found: scanner/templates/default.yaml
+2025-05-31 01:43:52,798 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/default.yaml"]}}, "id": 1}
+2025-05-31 01:43:52,798 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/default.yaml']
+2025-05-31 01:43:52,800 - ERROR:Template file not found: scanner/templates/default.yaml
+2025-05-31 01:43:52,842 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/default.yaml"]}}, "id": 1}
+2025-05-31 01:43:52,843 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/default.yaml']
+2025-05-31 01:43:52,844 - ERROR:Template file not found: scanner/templates/default.yaml
+2025-05-31 01:46:27,077 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-31 01:46:27,081 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-31 01:46:27,092 - ERROR:Invalid URL: 
+2025-05-31 01:47:38,422 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": [""], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-31 01:47:38,422 - INFO:Processing nuclei_scan with URLs: , Templates: ['scanner/templates/']
+2025-05-31 01:47:38,427 - ERROR:Invalid URL: 
+2025-05-31 01:47:48,501 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/bac-detection.yaml"]}}, "id": 1}
+2025-05-31 01:47:48,501 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/bac-detection.yaml']
+2025-05-31 01:47:48,503 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/bac-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-31 01:48:18,142 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-31 01:48:18.142448
+2025-05-31 01:48:18,144 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/csrf-detection.yaml"]}}, "id": 1}
+2025-05-31 01:48:18,144 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/csrf-detection.yaml']
+2025-05-31 01:48:18,146 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/csrf-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-31 01:48:22,326 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-31 01:48:22.325918
+2025-05-31 01:48:22,328 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/cve-2019-9641.yaml"]}}, "id": 1}
+2025-05-31 01:48:22,328 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/cve-2019-9641.yaml']
+2025-05-31 01:48:22,330 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/cve-2019-9641.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-31 01:48:26,411 - ERROR:No valid vulnerabilities found from Nuclei output
+2025-05-31 01:48:26,415 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/idor-detection.yaml"]}}, "id": 1}
+2025-05-31 01:48:26,415 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/idor-detection.yaml']
+2025-05-31 01:48:26,416 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/idor-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-31 01:48:31,184 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-31 01:48:31.184127
+2025-05-31 01:48:31,187 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/lfi-rce-detection.yaml"]}}, "id": 1}
+2025-05-31 01:48:31,187 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/lfi-rce-detection.yaml']
+2025-05-31 01:48:31,189 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/lfi-rce-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-31 01:48:35,855 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-31 01:48:35.855666
+2025-05-31 01:48:35,857 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/sensitive-data-exposure.yaml"]}}, "id": 1}
+2025-05-31 01:48:35,858 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/sensitive-data-exposure.yaml']
+2025-05-31 01:48:35,860 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/sensitive-data-exposure.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-31 01:48:40,037 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-31 01:48:40.037681
+2025-05-31 01:48:40,039 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/sql_injection_advanced.yaml"]}}, "id": 1}
+2025-05-31 01:48:40,040 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/sql_injection_advanced.yaml']
+2025-05-31 01:48:40,042 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/sql_injection_advanced.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-31 01:48:45,456 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-31 01:48:45.456012
+2025-05-31 01:48:45,458 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/ssrf-detection.yaml"]}}, "id": 1}
+2025-05-31 01:48:45,458 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/ssrf-detection.yaml']
+2025-05-31 01:48:45,460 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/ssrf-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-31 01:48:49,041 - ERROR:No valid vulnerabilities found from Nuclei output
+2025-05-31 01:48:49,044 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/xss-detection.yaml"]}}, "id": 1}
+2025-05-31 01:48:49,045 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/xss-detection.yaml']
+2025-05-31 01:48:49,046 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/xss-detection.yaml -jsonl -silent -no-color -rate-limit 10
+2025-05-31 01:48:54,557 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-31 01:48:54.557085
+2025-05-31 01:48:54,618 - INFO:Received request data: {"jsonrpc": "2.0", "method": "call_tool", "params": {"tool_name": "nuclei_scan", "args": {"urls": ["http://testphp.vulnweb.com/"], "template_paths": ["scanner/templates/"]}}, "id": 1}
+2025-05-31 01:48:54,618 - INFO:Processing nuclei_scan with URLs: http://testphp.vulnweb.com/, Templates: ['scanner/templates/']
+2025-05-31 01:48:54,620 - INFO:Running Nuclei command: nuclei -u http://testphp.vulnweb.com/ -t scanner/templates/ -jsonl -silent -no-color -rate-limit 10
+2025-05-31 01:49:01,616 - INFO:Scan completed for http://testphp.vulnweb.com/ at 2025-05-31 01:49:01.616600

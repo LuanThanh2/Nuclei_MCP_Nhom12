@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuclei MCP Scanner</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      a {
+        display: inline-block;
+        margin-top: 10px;
+        color: #007bff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      #loadingManual,
+      #loadingAI {
+        display: none;
+        margin-top: 10px;
+        color: #555;
+      }
+      .tab {
+        margin-bottom: 20px;
+      }
+      .tab button {
+        background-color: #ddd;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      .tab button.active {
+        background-color: #4caf50;
+        color: white;
+      }
+      .tabcontent {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Nuclei MCP Scanner</h1>
+
+      <!-- Tab để chọn giữa scan truyền thống và scan với AI -->
+      <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'manualScan')">
+          Manual Scan
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'aiScan')">
+          DeepSeek-Assisted Scan
+        </button>
+      </div>
+
+      <!-- Form scan truyền thống -->
+      <div id="manualScan" class="tabcontent" style="display: block">
+        <form id="manualScanForm" method="POST">
+          <div class="form-group">
+            <label for="url"
+              >Target URL (e.g., http://testphp.vulnweb.com/):</label
+            >
+            <input
+              type="text"
+              id="url"
+              name="url"
+              placeholder="Target URL (e.g., http://testphp.vulnweb.com/)"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="template">Choose Template:</label>
+            <select id="template" name="template" required>
+              <option value="" disabled selected>Select a template</option>
+              {% for template in templates %}
+              <option value="{{ template }}">{{ template }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div>
+            <button type="submit">Scan</button>
+            <a href="/history">View Scan History</a>
+          </div>
+          <div id="loadingManual">Scanning... Please wait.</div>
+        </form>
+      </div>
+
+      <!-- Form scan với AI -->
+      <div id="aiScan" class="tabcontent">
+        <form id="aiScanForm" method="POST">
+          <div class="form-group">
+            <label for="command"
+              >Enter Command (e.g., Scan http://demo.testfire.net for
+              XSS):</label
+            >
+            <input
+              type="text"
+              id="command"
+              name="command"
+              placeholder="Enter command (e.g., Scan http://demo.testfire.net for XSS)"
+              required
+            />
+          </div>
+          <div>
+            <button type="submit">Scan with DeepSeek</button>
+            <a href="/history">View Scan History</a>
+          </div>
+          <div id="loadingAI">Processing with DeepSeek... Please wait.</div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Form scan truyền thống
+      document
+        .getElementById("manualScanForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const formData = new FormData(this);
+          const loadingDiv = document.getElementById("loadingManual");
+          loadingDiv.style.display = "block";
+
+          try {
+            const response = await fetch("/scan", {
+              method: "POST",
+              body: formData
+            });
+            const data = await response.json();
+            if (data.status === "success") {
+              alert(
+                `Scan completed! Duration: ${data.duration} seconds. Redirecting to results...`
+              );
+              window.location.href = "/results";
+            } else {
+              alert(`Error: ${data.message || "An unknown error occurred."}`);
+            }
+          } catch (error) {
+            alert(
+              `Error: ${
+                error.message || "An unexpected error occurred while scanning."
+              }`
+            );
+          } finally {
+            loadingDiv.style.display = "none";
+          }
+        });
+
+      // Form scan với AI
+      document
+        .getElementById("aiScanForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const formData = new FormData(this);
+          const loadingDiv = document.getElementById("loadingAI");
+          loadingDiv.style.display = "block";
+
+          try {
+            const response = await fetch("/scan", {
+              method: "POST",
+              body: formData
+            });
+            const data = await response.json();
+            if (data.status === "success") {
+              alert(
+                `Scan completed! Duration: ${data.duration} seconds. Redirecting to results...`
+              );
+              window.location.href = "/results";
+            } else {
+              alert(`Error: ${data.message || "An unknown error occurred."}`);
+            }
+          } catch (error) {
+            alert(
+              `Error: ${
+                error.message ||
+                "An unexpected error occurred while processing with DeepSeek."
+              }`
+            );
+          } finally {
+            loadingDiv.style.display = "none";
+          }
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+id: ssrf-detection
+info:
+  name: Server-Side Request Forgery Detection
+  author: nghia
+  severity: critical
+  description: Detects Server-Side Request Forgery (SSRF) vulnerabilities by attempting to access internal or external resources.
+  reference:
+    - https://owasp.org/www-community/attacks/Server_Side_Request_Forgery
+  tags: ssrf, security
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/fetch_url.php?url={{payload}}"
+      - "{{BaseURL}}/proxy.php?url={{payload}}"
+    payloads:
+      payload:
+        - "http://169.254.169.254/latest/meta-data/" # AWS metadata endpoint
+        - "http://localhost:8080/admin"
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "ami-id"
+          - "instance-id"
+          - "Admin Dashboard"
+        part: body
+        condition: or

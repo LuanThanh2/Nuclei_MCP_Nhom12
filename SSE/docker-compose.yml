@@ -1,0 +1,41 @@
+services:
+  mcp-server:
+    build: .
+    command: uvicorn mcp_server_sse:app --host 0.0.0.0 --port 8001
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./logs:/app/logs
+      - ./scanner/templates:/app/scanner/templates
+    environment:
+      - MCP_TRANSPORT=sse
+      - DEEPSEEK_API_KEY=sk-075fd2168b874f91b3d922474928fd9d
+      - SSE_PORT=8001
+      - SSE_HOST=0.0.0.0
+    deploy:
+      resources:
+        limits:
+          cpus: "1.5"
+          memory: 2G
+
+  web-client:
+    build: .
+    command: uvicorn app_sse:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+      - ./scanner/templates:/app/scanner/templates
+      - ./templates:/app/templates
+    environment:
+      - MCP_TRANSPORT=sse
+      - DEEPSEEK_API_KEY=sk-075fd2168b874f91b3d922474928fd9d
+      - SSE_PORT=8001
+      - SSE_HOST=mcp-server
+    depends_on:
+      - mcp-server
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 1G
